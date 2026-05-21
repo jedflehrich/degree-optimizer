@@ -1,0 +1,505 @@
+{
+  "program_id": "uw-madison-ie-bs-2025",
+  "university": "uw-madison",
+  "name": "Industrial Engineering",
+  "degree": "BS",
+  "catalog_year": "2025-2026",
+  "total_credits_required": 120,
+  "residency_credits_required": 30,
+  "upper_level_credits_required": null,
+  "in_major_credits_required": null,
+  "gpa_required": 2.0,
+  "overlap_rules": [],
+  "requirement_groups": [
+    {
+      "id": "math_required",
+      "name": "Mathematics — Required",
+      "description": "Required math sequence for all IE students.",
+      "type": "all_required",
+      "credits_required": null,
+      "courses_required": null,
+      "courses": ["MATH_221", "MATH_222", "MATH_234", "MATH_340"],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": null
+    },
+    {
+      "id": "physics_or_ema",
+      "name": "Physics or Statics+Dynamics",
+      "description": "Choose one: Physics 201, Physics 207, or the EMA 201+202 sequence.",
+      "type": "one_of",
+      "credits_required": null,
+      "courses_required": 1,
+      "courses": ["PHYSICS_201", "PHYSICS_207", "EMA_201_202_SEQ"],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "EMA 201+202 counts as a single selection satisfying this group."
+    },
+    {
+      "id": "basic_science_electives",
+      "name": "Basic Science Electives",
+      "description": "Choose 9 credits from the approved basic science list.",
+      "type": "n_credits",
+      "credits_required": 9,
+      "courses_required": null,
+      "courses": [
+        "ANAT_PHY_335",
+        "BIOLOGY_151", "ZOOLOGY_153", "BIOLOGY_152",
+        "CHEM_103", "CHEM_109", "CHEM_115",
+        "CHEM_104", "CHEM_116", "CHEM_311",
+        "CHEM_327", "CHEM_329",
+        "CHEM_341", "CHEM_342", "CHEM_343", "CHEM_344", "CHEM_345", "CHEM_346",
+        "MICROBIO_101", "MICROBIO_102",
+        "PHYSICS_202", "PHYSICS_208", "PHYSICS_248",
+        "PHYSICS_205", "PHYSICS_241", "PHYSICS_249",
+        "MATH_COMPSCI_240", "MATH_319", "MATH_421",
+        "MATH_443", "MATH_COMPSCI_STAT_475",
+        "MATH_521", "MATH_522"
+      ],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "Total math+science block is 30-31 credits."
+    },
+    {
+      "id": "prob_stats",
+      "name": "Probability and Statistics",
+      "description": "Two statistics courses totaling 6 credits.",
+      "type": "all_required",
+      "credits_required": null,
+      "courses_required": null,
+      "courses": [],
+      "sub_groups": [
+        {
+          "id": "prob_stats_first",
+          "name": "Statistics I",
+          "description": "Choose one intro statistics course.",
+          "type": "one_of",
+          "credits_required": null,
+          "courses_required": 1,
+          "courses": ["STAT_311", "STAT_MATH_309"],
+          "sub_groups": [],
+          "distinct_from_groups": [],
+          "notes": null
+        },
+        {
+          "id": "prob_stats_second",
+          "name": "Statistics II",
+          "description": "Choose one second statistics course.",
+          "type": "one_of",
+          "credits_required": null,
+          "courses_required": 1,
+          "courses": ["ISYE_210", "STAT_MATH_310", "STAT_312"],
+          "sub_groups": [],
+          "distinct_from_groups": [],
+          "notes": "ISyE 210 can satisfy this OR the ISyE core requirement, but not both."
+        }
+      ],
+      "distinct_from_groups": [],
+      "notes": "Total 6 credits."
+    },
+    {
+      "id": "computer_sciences",
+      "name": "Computer Sciences",
+      "description": "CS 220 required plus one additional CS course.",
+      "type": "all_required",
+      "credits_required": null,
+      "courses_required": null,
+      "courses": [],
+      "sub_groups": [
+        {
+          "id": "cs_required",
+          "name": "Required CS Course",
+          "description": "CS 220 is required.",
+          "type": "all_required",
+          "credits_required": null,
+          "courses_required": null,
+          "courses": ["COMP_SCI_220"],
+          "sub_groups": [],
+          "distinct_from_groups": [],
+          "notes": null
+        },
+        {
+          "id": "cs_elective",
+          "name": "CS Elective",
+          "description": "Choose one additional CS course.",
+          "type": "one_of",
+          "credits_required": null,
+          "courses_required": 1,
+          "courses": [
+            "COMP_SCI_200", "COMP_SCI_300", "COMP_SCI_320",
+            "COMP_SCI_400", "COMP_SCI_412"
+          ],
+          "sub_groups": [],
+          "distinct_from_groups": [],
+          "notes": "3-4 credits depending on selection. Total CS block is 7-8 credits."
+        }
+      ],
+      "distinct_from_groups": [],
+      "notes": null
+    },
+    {
+      "id": "isye_core",
+      "name": "Required ISyE Classes",
+      "description": "All ISyE core courses are required.",
+      "type": "all_required",
+      "credits_required": null,
+      "courses_required": null,
+      "courses": [
+        "ISYE_191", "ISYE_312", "ISYE_313", "ISYE_315",
+        "ISYE_320", "ISYE_321", "ISYE_323",
+        "ISYE_348", "ISYE_PSYCH_349",
+        "ISYE_350", "ISYE_450"
+      ],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "Total 28 credits."
+    },
+    {
+      "id": "focus_area",
+      "name": "ISyE Focus Area Technical Electives",
+      "description": "Choose ONE of the six focus areas below.",
+      "type": "one_of",
+      "credits_required": null,
+      "courses_required": 1,
+      "courses": [],
+      "sub_groups": [
+        {
+          "id": "focus_industrial_data_analytics",
+          "name": "Industrial Data Analytics",
+          "description": "At least 3 courses from the IDA list (9 cr), 1 ISyE elective outside IDA (3 cr), additional ISyE electives (6 cr).",
+          "type": "all_required",
+          "credits_required": null,
+          "courses_required": null,
+          "courses": [],
+          "sub_groups": [
+            {
+              "id": "focus_ida_core",
+              "name": "Industrial Data Analytics — Core (3 courses)",
+              "description": "Choose at least 3 courses from this list.",
+              "type": "n_courses",
+              "credits_required": null,
+              "courses_required": 3,
+              "courses": [
+                "ISYE_412", "ISYE_ME_512", "ISYE_521", "ISYE_562",
+                "ISYE_ECE_570", "ISYE_603", "ISYE_612", "ISYE_649"
+              ],
+              "sub_groups": [],
+              "distinct_from_groups": [],
+              "notes": "9 credits minimum."
+            },
+            {
+              "id": "focus_ida_outside_elective",
+              "name": "ISyE Elective Outside IDA",
+              "description": "One ISyE elective from any area other than Industrial Data Analytics.",
+              "type": "n_courses",
+              "credits_required": null,
+              "courses_required": 1,
+              "courses": [],
+              "sub_groups": [],
+              "distinct_from_groups": ["focus_ida_core"],
+              "notes": "Must be an ISyE course not listed in the IDA area. 3 credits."
+            },
+            {
+              "id": "focus_ida_additional",
+              "name": "Additional ISyE Electives",
+              "description": "Additional ISyE electives from any area.",
+              "type": "n_credits",
+              "credits_required": 6,
+              "courses_required": null,
+              "courses": [],
+              "sub_groups": [],
+              "distinct_from_groups": [],
+              "notes": "Any ISyE elective course."
+            }
+          ],
+          "distinct_from_groups": [],
+          "notes": "Total 18 credits."
+        },
+        {
+          "id": "focus_applications",
+          "name": "Applications of Industrial Engineering",
+          "description": "At least 3 courses from the applications list (9 cr), 1 ISyE elective outside this area (3 cr), additional ISyE electives (6 cr).",
+          "type": "all_required",
+          "credits_required": null,
+          "courses_required": null,
+          "courses": [],
+          "sub_groups": [
+            {
+              "id": "focus_app_core",
+              "name": "Applications — Core (3 courses)",
+              "description": "Choose at least 3 from manufacturing, health systems, or quality engineering.",
+              "type": "n_courses",
+              "credits_required": null,
+              "courses_required": 3,
+              "courses": [
+                "ISYE_415", "ISYE_ME_510", "ISYE_515", "ISYE_604", "ISYE_605", "ISYE_ME_641", "ISYE_645",
+                "ISYE_417", "ISYE_517", "ISYE_606",
+                "ISYE_520", "ISYE_575"
+              ],
+              "sub_groups": [],
+              "distinct_from_groups": [],
+              "notes": "9 credits."
+            },
+            {
+              "id": "focus_app_outside_elective",
+              "name": "ISyE Elective Outside Applications",
+              "description": "One ISyE elective from any area other than Applications.",
+              "type": "n_courses",
+              "credits_required": null,
+              "courses_required": 1,
+              "courses": [],
+              "sub_groups": [],
+              "distinct_from_groups": ["focus_app_core"],
+              "notes": "3 credits."
+            },
+            {
+              "id": "focus_app_additional",
+              "name": "Additional ISyE Electives",
+              "description": "Additional ISyE electives from any area.",
+              "type": "n_credits",
+              "credits_required": 6,
+              "courses_required": null,
+              "courses": [],
+              "sub_groups": [],
+              "distinct_from_groups": [],
+              "notes": null
+            }
+          ],
+          "distinct_from_groups": [],
+          "notes": "Total 18 credits."
+        },
+        {
+          "id": "focus_human_factors",
+          "name": "Human Factors and Ergonomics",
+          "description": "At least 3 courses from HFE list (9 cr), 1 ISyE elective outside HFE (3 cr), additional ISyE electives (6 cr).",
+          "type": "all_required",
+          "credits_required": null,
+          "courses_required": null,
+          "courses": [],
+          "sub_groups": [
+            {
+              "id": "focus_hfe_core",
+              "name": "Human Factors — Core (3 courses)",
+              "description": "Choose at least 3 from the HFE list.",
+              "type": "n_courses",
+              "credits_required": null,
+              "courses_required": 3,
+              "courses": [
+                "ISYE_COMPSCI_DS_518", "ISYE_PSYCH_549", "ISYE_555",
+                "ISYE_562", "ISYE_BME_564", "ISYE_602", "ISYE_BME_662"
+              ],
+              "sub_groups": [],
+              "distinct_from_groups": [],
+              "notes": "9 credits."
+            },
+            {
+              "id": "focus_hfe_outside_elective",
+              "name": "ISyE Elective Outside HFE",
+              "description": "One ISyE elective from any area other than Human Factors.",
+              "type": "n_courses",
+              "credits_required": null,
+              "courses_required": 1,
+              "courses": [],
+              "sub_groups": [],
+              "distinct_from_groups": ["focus_hfe_core"],
+              "notes": "3 credits."
+            },
+            {
+              "id": "focus_hfe_additional",
+              "name": "Additional ISyE Electives",
+              "description": "Additional ISyE electives from any area.",
+              "type": "n_credits",
+              "credits_required": 6,
+              "courses_required": null,
+              "courses": [],
+              "sub_groups": [],
+              "distinct_from_groups": [],
+              "notes": null
+            }
+          ],
+          "distinct_from_groups": [],
+          "notes": "Total 18 credits."
+        },
+        {
+          "id": "focus_optimization",
+          "name": "Optimization and Operations Research",
+          "description": "At least 3 courses from OR list (9 cr), 1 ISyE elective outside OR (3 cr), additional ISyE electives (6 cr).",
+          "type": "all_required",
+          "credits_required": null,
+          "courses_required": null,
+          "courses": [],
+          "sub_groups": [
+            {
+              "id": "focus_or_core",
+              "name": "OR — Core (3 courses)",
+              "description": "Choose at least 3 from the OR list.",
+              "type": "n_courses",
+              "credits_required": null,
+              "courses_required": 3,
+              "courses": [
+                "ISYE_COMPSCI_MATH_425", "ISYE_516",
+                "ISYE_COMPSCI_ECE_524", "ISYE_COMPSCI_MATH_STAT_525",
+                "ISYE_603", "ISYE_620", "ISYE_624",
+                "ISYE_MATH_OTM_STAT_632"
+              ],
+              "sub_groups": [],
+              "distinct_from_groups": [],
+              "notes": "9 credits."
+            },
+            {
+              "id": "focus_or_outside_elective",
+              "name": "ISyE Elective Outside OR",
+              "description": "One ISyE elective from any area other than OR.",
+              "type": "n_courses",
+              "credits_required": null,
+              "courses_required": 1,
+              "courses": [],
+              "sub_groups": [],
+              "distinct_from_groups": ["focus_or_core"],
+              "notes": "3 credits."
+            },
+            {
+              "id": "focus_or_additional",
+              "name": "Additional ISyE Electives",
+              "description": "Additional ISyE electives from any area.",
+              "type": "n_credits",
+              "credits_required": 6,
+              "courses_required": null,
+              "courses": [],
+              "sub_groups": [],
+              "distinct_from_groups": [],
+              "notes": null
+            }
+          ],
+          "distinct_from_groups": [],
+          "notes": "Total 18 credits."
+        },
+        {
+          "id": "focus_distributed",
+          "name": "Distributed Focus Area",
+          "description": "6 courses across at least 3 of the 4 focus areas.",
+          "type": "n_courses",
+          "credits_required": null,
+          "courses_required": 6,
+          "courses": [],
+          "sub_groups": [],
+          "distinct_from_groups": [],
+          "notes": "Must span at least 3 of: Industrial Data Analytics, Applications, Human Factors, Optimization."
+        },
+        {
+          "id": "focus_honors_research",
+          "name": "Honors in Research Focus Area",
+          "description": "5 courses across at least 2 focus areas, plus 3 required honors courses.",
+          "type": "all_required",
+          "credits_required": null,
+          "courses_required": null,
+          "courses": ["ISYE_468", "ISYE_478", "ISYE_489"],
+          "sub_groups": [
+            {
+              "id": "focus_honors_electives",
+              "name": "Honors Focus Electives",
+              "description": "5 courses across at least 2 of the 4 focus areas.",
+              "type": "n_courses",
+              "credits_required": null,
+              "courses_required": 5,
+              "courses": [],
+              "sub_groups": [],
+              "distinct_from_groups": [],
+              "notes": "Must span at least 2 focus areas."
+            }
+          ],
+          "distinct_from_groups": [],
+          "notes": "Total 20 credits."
+        }
+      ],
+      "distinct_from_groups": [],
+      "notes": "Choose exactly one focus area. Total 18-20 credits."
+    },
+    {
+      "id": "communication",
+      "name": "Communication Skills",
+      "description": "First-year writing course plus INTEREGR 397.",
+      "type": "all_required",
+      "credits_required": null,
+      "courses_required": null,
+      "courses": [],
+      "sub_groups": [
+        {
+          "id": "comm_writing",
+          "name": "Writing Requirement",
+          "description": "Choose one first-year writing course.",
+          "type": "one_of",
+          "credits_required": null,
+          "courses_required": 1,
+          "courses": ["ENGL_100", "COM_ARTS_100", "LSC_100", "ESL_118"],
+          "sub_groups": [],
+          "distinct_from_groups": [],
+          "notes": "3 credits."
+        },
+        {
+          "id": "comm_engineering",
+          "name": "Engineering Communication",
+          "description": "INTEREGR 397 is required.",
+          "type": "all_required",
+          "credits_required": null,
+          "courses_required": null,
+          "courses": ["INTEREGR_397"],
+          "sub_groups": [],
+          "distinct_from_groups": [],
+          "notes": "3 credits."
+        }
+      ],
+      "distinct_from_groups": [],
+      "notes": null
+    },
+    {
+      "id": "liberal_studies",
+      "name": "Liberal Studies",
+      "description": "Liberal Studies electives per CoE requirements plus ECON 101.",
+      "type": "all_required",
+      "credits_required": null,
+      "courses_required": null,
+      "courses": ["ECON_101"],
+      "sub_groups": [
+        {
+          "id": "liberal_studies_electives",
+          "name": "Liberal Studies Electives",
+          "description": "11 credits of liberal studies electives per CoE guidelines.",
+          "type": "n_credits",
+          "credits_required": 11,
+          "courses_required": null,
+          "courses": [],
+          "sub_groups": [],
+          "distinct_from_groups": [],
+          "notes": "See CoE Liberal Studies Guidelines for eligible courses."
+        }
+      ],
+      "distinct_from_groups": [],
+      "notes": "Total 15 credits (11 electives + 4 ECON 101)."
+    },
+    {
+      "id": "professional_electives",
+      "name": "Professional Electives",
+      "description": "6 credits from approved professional elective categories.",
+      "type": "n_credits",
+      "credits_required": 6,
+      "courses_required": null,
+      "courses": [],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "Eligible: CoE courses 200+, biological/natural/social/physical sciences/humanities at Intermediate or Advanced level, at most 5 credits of ISyE 699 or ISyE independent study, School of Business courses 200+ (including ACCT IS 100). May NOT include STAT 301 or transfer/test math elective credits for calculus."
+    },
+    {
+      "id": "free_electives",
+      "name": "Free Electives",
+      "description": "4 credits of free electives.",
+      "type": "n_credits",
+      "credits_required": 4,
+      "courses_required": null,
+      "courses": [],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": null
+    }
+  ]
+}

@@ -1,0 +1,265 @@
+{
+  "program_id": "uw-madison-ds-bs-2025",
+  "university": "uw-madison",
+  "name": "Data Science",
+  "degree": "BS",
+  "college": "letters_and_science",
+  "catalog_year": "2025-2026",
+  "total_credits_required": 120,
+  "residency_credits_required": 30,
+  "residency_after_86th_credit_required": 30,
+  "upper_level_credits_required": 60,
+  "liberal_arts_science_credits_required": 108,
+  "in_major_credits_required": 15,
+  "in_major_upper_level_gpa_required": 2.0,
+  "gpa_required": 2.0,
+  "overlap_rules": [
+    {
+      "with_program_id": "uw-madison-ie-bs-2025",
+      "policy": "unlimited",
+      "max_overlap_credits": null
+    }
+  ],
+  "requirement_groups": [
+    {
+      "id": "foundational_math",
+      "name": "Foundational Math Courses",
+      "description": "Required calculus sequence.",
+      "type": "all_required",
+      "credits_required": null,
+      "courses_required": null,
+      "courses": ["MATH_222"],
+      "sub_groups": [
+        {
+          "id": "foundational_math_calc1",
+          "name": "Calculus 1",
+          "description": "MATH 221 or MATH 217.",
+          "type": "one_of",
+          "credits_required": null,
+          "courses_required": 1,
+          "courses": ["MATH_221", "MATH_217"],
+          "sub_groups": [],
+          "distinct_from_groups": [],
+          "notes": null
+        }
+      ],
+      "distinct_from_groups": [],
+      "notes": "Total 9 credits."
+    },
+    {
+      "id": "foundational_ds",
+      "name": "Foundational Data Science Courses",
+      "description": "Core data science and programming courses required for all DS majors.",
+      "type": "all_required",
+      "credits_required": null,
+      "courses_required": null,
+      "courses": ["STAT_240", "STAT_340", "COMP_SCI_320"],
+      "sub_groups": [
+        {
+          "id": "foundational_ds_intro_prog",
+          "name": "Intro Programming",
+          "description": "CS 220 or CS 300.",
+          "type": "one_of",
+          "credits_required": null,
+          "courses_required": 1,
+          "courses": ["COMP_SCI_220", "COMP_SCI_300"],
+          "sub_groups": [],
+          "distinct_from_groups": [],
+          "notes": "CS 220 is the preferred path for DS; CS 300 is the CS-track equivalent."
+        },
+        {
+          "id": "foundational_ds_ethics",
+          "name": "Ethics Requirement",
+          "description": "One ethics course: LIS 461, ECE/ISyE 570, or PHILOS 244.",
+          "type": "one_of",
+          "credits_required": null,
+          "courses_required": 1,
+          "courses": ["LIS_461", "ECE_ISYE_570", "PHILOS_244"],
+          "sub_groups": [],
+          "distinct_from_groups": [],
+          "notes": "ECE/ISyE 570 also appears in the IE Industrial Data Analytics focus area — strong overlap candidate."
+        }
+      ],
+      "distinct_from_groups": [],
+      "notes": "Total 19-20 credits."
+    },
+    {
+      "id": "electives",
+      "name": "Major Electives",
+      "description": "18 credits of upper-level electives, at least one from each required category. At most one course per probability/inference/linear algebra grouping may count.",
+      "type": "all_required",
+      "credits_required": 18,
+      "courses_required": null,
+      "courses": [],
+      "sub_groups": [
+        {
+          "id": "elective_linear_algebra",
+          "name": "Linear Algebra",
+          "description": "Choose exactly one linear algebra course.",
+          "type": "one_of",
+          "credits_required": null,
+          "courses_required": 1,
+          "courses": ["MATH_320", "MATH_340", "MATH_341", "MATH_345", "MATH_375"],
+          "sub_groups": [],
+          "distinct_from_groups": [],
+          "notes": "Only one linear algebra course may count toward the DS major. MATH 340 also required by IE."
+        },
+        {
+          "id": "elective_advanced_computing",
+          "name": "Advanced Computing",
+          "description": "At least one course from the advanced computing list.",
+          "type": "n_courses",
+          "credits_required": null,
+          "courses_required": 1,
+          "courses": [
+            "COMP_SCI_400", "COMP_SCI_412",
+            "COMP_SCI_MATH_513", "COMP_SCI_MATH_514",
+            "COMP_SCI_ECE_ISYE_524",
+            "COMP_SCI_544", "COMP_SCI_557", "COMP_SCI_564", "COMP_SCI_565",
+            "COMP_SCI_BMI_576",
+            "GEOG_573", "GEOG_574",
+            "MATH_444",
+            "STAT_COMP_SCI_471"
+          ],
+          "sub_groups": [],
+          "distinct_from_groups": [],
+          "notes": "COMP SCI/ECE/ISyE 524 also in IE OR focus area. COMP SCI 400 and 412 also IE CS electives."
+        },
+        {
+          "id": "elective_statistical_modeling",
+          "name": "Statistical Modeling",
+          "description": "At least one course from the statistical modeling list.",
+          "type": "n_courses",
+          "credits_required": null,
+          "courses_required": 1,
+          "courses": [
+            "ACT_SCI_657",
+            "CIV_ENGR_516",
+            "ECON_400", "ECON_410", "ECON_460",
+            "GEOG_560", "GEOG_579",
+            "ISYE_575",
+            "MATH_531",
+            "MATH_ISYE_OTM_STAT_632",
+            "MATH_635",
+            "STAT_MATH_309", "STAT_311", "MATH_STAT_431",
+            "STAT_MATH_310", "STAT_312",
+            "STAT_349", "STAT_351", "STAT_421",
+            "STAT_ME_424", "STAT_436", "STAT_443",
+            "STAT_456", "STAT_461", "STAT_575"
+          ],
+          "sub_groups": [],
+          "distinct_from_groups": [],
+          "notes": "STAT 311/309 also satisfies IE stats requirement. STAT 310/312 also satisfies IE stats II. ISyE 575 also in IE Applications focus. ISyE/MATH/OTM/STAT 632 also in IE OR focus."
+        },
+        {
+          "id": "elective_machine_learning",
+          "name": "Machine Learning",
+          "description": "At least one course from the machine learning list.",
+          "type": "n_courses",
+          "credits_required": null,
+          "courses_required": 1,
+          "courses": [
+            "BSE_405",
+            "CHEM_361",
+            "COMP_SCI_ECE_ME_532",
+            "COMP_SCI_ECE_ME_539",
+            "COMP_SCI_540",
+            "ISYE_521",
+            "MATH_535", "MATH_616",
+            "PHYSICS_361",
+            "STAT_451", "STAT_453"
+          ],
+          "sub_groups": [],
+          "distinct_from_groups": [],
+          "notes": "ISyE 521 also in IE Industrial Data Analytics focus area — key overlap."
+        },
+        {
+          "id": "elective_other",
+          "name": "Other Electives",
+          "description": "Up to 2 courses from the other electives list, or additional courses from the required categories above, to reach 18 total credits.",
+          "type": "n_credits",
+          "credits_required": 6,
+          "courses_required": null,
+          "courses": [
+            "ACT_SCI_655",
+            "COMP_SCI_ISYE_MATH_425",
+            "COMP_SCI_ISYE_MATH_STAT_525",
+            "COMP_SCI_ECE_533",
+            "COMP_SCI_541", "COMP_SCI_559",
+            "COMP_SCI_BMI_567",
+            "COMP_SCI_577",
+            "ECE_203",
+            "ECON_315", "ECON_570", "ECON_695",
+            "FW_ECOL_395", "FW_ECOL_458",
+            "GEN_BUS_317",
+            "GEOG_378", "GEOG_572", "GEOG_575",
+            "INFO_SYS_322", "INFO_SYS_423",
+            "ISYE_323", "ISYE_412",
+            "ISYE_ME_512", "ISYE_612",
+            "LIS_407", "LIS_440", "LIS_464", "LIS_501",
+            "LSC_460", "LSC_660",
+            "MATH_331",
+            "SOC_351",
+            "SOC_CE_SOC_618", "SOC_CE_SOC_693",
+            "SOIL_SCI_585",
+            "STAT_405", "STAT_433"
+          ],
+          "sub_groups": [],
+          "distinct_from_groups": [],
+          "notes": "At most 2 courses from this specific list. Additional credits beyond 2 must come from the Advanced Computing, Statistical Modeling, or Machine Learning categories. ISyE 323, 412, 512, 612 also appear in IE core or IDA focus area."
+        }
+      ],
+      "distinct_from_groups": [],
+      "notes": "Must total 18 upper-level credits. Only one probability course (MATH 331, STAT/MATH 309, STAT 311, MATH/STAT 431), one inference course (STAT/MATH 310, STAT 312), and one linear algebra course may count."
+    },
+    {
+      "id": "ls_bs_requirements",
+      "name": "L&S Bachelor of Science Degree Requirements",
+      "description": "Additional requirements for the L&S BS degree that DS students must satisfy.",
+      "type": "all_required",
+      "credits_required": null,
+      "courses_required": null,
+      "courses": [],
+      "sub_groups": [
+        {
+          "id": "ls_bs_math",
+          "name": "L&S Mathematics Requirement",
+          "description": "Two courses of 3+ credits at Intermediate or Advanced level in MATH, COMP SCI, or STAT. Max one COMP SCI and one STAT course.",
+          "type": "n_courses",
+          "credits_required": null,
+          "courses_required": 2,
+          "courses": [],
+          "sub_groups": [],
+          "distinct_from_groups": [],
+          "notes": "Satisfied by major coursework in most cases."
+        },
+        {
+          "id": "ls_bs_language",
+          "name": "Language Requirement",
+          "description": "Complete third unit of a language other than English.",
+          "type": "n_courses",
+          "credits_required": null,
+          "courses_required": 1,
+          "courses": [],
+          "sub_groups": [],
+          "distinct_from_groups": [],
+          "notes": "May be satisfied by AP/IB scores or placement test. Check with L&S advisor."
+        },
+        {
+          "id": "ls_bs_breadth",
+          "name": "L&S Breadth Requirements",
+          "description": "12 cr humanities (6 must be literature), 12 cr social science, 12 cr natural science (6 biological + 6 physical).",
+          "type": "all_required",
+          "credits_required": 36,
+          "courses_required": null,
+          "courses": [],
+          "sub_groups": [],
+          "distinct_from_groups": [],
+          "notes": "Wide range of courses satisfy each category. Overlaps significantly with university gen ed breadth requirements."
+        }
+      ],
+      "distinct_from_groups": [],
+      "notes": "DS is an L&S degree. These requirements are in addition to the major. See ls_bs_degree_2025 program file when implemented."
+    }
+  ]
+}

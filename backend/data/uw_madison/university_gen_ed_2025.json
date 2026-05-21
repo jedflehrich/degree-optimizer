@@ -1,0 +1,85 @@
+{
+  "program_id": "uw-madison-gen-ed-2025",
+  "university": "uw-madison",
+  "name": "University General Education Requirements",
+  "degree": "gen_ed",
+  "catalog_year": "2025-2026",
+  "total_credits_required": 120,
+  "residency_credits_required": 30,
+  "gpa_required": 2.0,
+  "overlap_rules": [],
+  "requirement_groups": [
+    {
+      "id": "gen_ed_breadth_humanities",
+      "name": "Breadth — Humanities / Literature / Arts",
+      "description": "6 credits of humanities, literature, or arts breadth courses.",
+      "type": "n_credits",
+      "credits_required": 6,
+      "courses_required": null,
+      "courses": [],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "Many courses across departments satisfy this. Check course attributes in the UW course guide."
+    },
+    {
+      "id": "gen_ed_breadth_natural_science",
+      "name": "Breadth — Natural Science",
+      "description": "4-6 credits: one 4-5 credit lab course OR two courses totaling 6 credits.",
+      "type": "n_credits",
+      "credits_required": 4,
+      "courses_required": null,
+      "courses": [],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "Lab component required if satisfying with a single course."
+    },
+    {
+      "id": "gen_ed_breadth_social_studies",
+      "name": "Breadth — Social Studies",
+      "description": "3 credits of social studies breadth.",
+      "type": "n_credits",
+      "credits_required": 3,
+      "courses_required": null,
+      "courses": [],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": null
+    },
+    {
+      "id": "gen_ed_communication",
+      "name": "Communication Part A & Part B",
+      "description": "Must complete both Communication Part A and Part B designated courses.",
+      "type": "all_required",
+      "credits_required": null,
+      "courses_required": null,
+      "courses": [],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "Designated courses carry a mortarboard symbol in the course guide. ENGL 100 and INTEREGR 397 satisfy this for IE students."
+    },
+    {
+      "id": "gen_ed_ethnic_studies",
+      "name": "Ethnic Studies",
+      "description": "Must complete at least one Ethnic Studies designated course.",
+      "type": "n_courses",
+      "credits_required": null,
+      "courses_required": 1,
+      "courses": [],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "Designated courses carry a mortarboard symbol in the course guide."
+    },
+    {
+      "id": "gen_ed_quantitative_reasoning",
+      "name": "Quantitative Reasoning Part A & Part B",
+      "description": "Must complete both Quantitative Reasoning Part A and Part B designated courses.",
+      "type": "all_required",
+      "credits_required": null,
+      "courses_required": null,
+      "courses": [],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "Designated courses carry a mortarboard symbol. Math and CS courses often satisfy QR-A or QR-B."
+    }
+  ]
+}
