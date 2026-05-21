@@ -7,7 +7,7 @@ it makes no scheduling decisions. Think of it as running a degree audit.
 """
 
 from dataclasses import dataclass, field
-from backend.api.models import Course, Program, RequirementGroup, RequirementType
+from backend.api.models import Course, DistinctCategoryRule, Program, RequirementGroup, RequirementType
 
 
 @dataclass
@@ -95,8 +95,13 @@ class RequirementChecker:
         # never miss a match due to ID naming differences.
         expanded = self._expand_completed(completed)
 
+        # Apply distinct category rules (e.g. DS "one probability course" rule).
+        # This returns a reduced set where only the allowed number of courses
+        # from each category are counted — extras are silently excluded.
+        effective = self._apply_category_limits(expanded, program.distinct_category_rules)
+
         group_statuses = [
-            self._check_group(group, expanded)
+            self._check_group(group, effective)
             for group in program.requirement_groups
         ]
 
@@ -107,6 +112,31 @@ class RequirementChecker:
             satisfied=all_satisfied,
             group_statuses=group_statuses,
         )
+
+    def category_excluded(
+        self,
+        course_id: str,
+        completed: set[str],
+        rules: list[DistinctCategoryRule],
+    ) -> bool:
+        """
+        Return True if adding this course would exceed a category limit.
+
+        Asks: "Is this course's category already full given what's completed?"
+        If yes, recommending or counting this course would violate the rule.
+
+        Useful for the solver to avoid recommending a second probability
+        course when one is already satisfied.
+        """
+        expanded = self._expand_completed(completed)
+        for rule in rules:
+            if course_id not in rule.course_ids:
+                continue
+            # Count how many courses in this category are already completed.
+            already_used = sum(1 for cid in rule.course_ids if cid in expanded)
+            if already_used >= rule.max_courses:
+                return True  # category is full — this course would be excluded
+        return False
 
     # ------------------------------------------------------------------
     # Internal helpers
@@ -259,3 +289,59 @@ class RequirementChecker:
             eligible_remaining=not_done,
             sub_statuses=sub_statuses,
         )
+
+    # ------------------------------------------------------------------
+    # Distinct category rule helpers
+    # ------------------------------------------------------------------
+
+    def _apply_category_limits(
+        self,
+        completed: set[str],
+        rules: list[DistinctCategoryRule],
+    ) -> set[str]:
+        """
+        Return a copy of `completed` with excess category courses removed.
+
+        For each rule, only the first `max_courses` completed courses from
+        that category are kept. The rest are excluded — they won't count
+        toward any requirement in this program.
+
+        "First" is defined by the order the courses appear in rule.course_ids,
+        which the data author controls. Put the most useful/common course first.
+        """
+        excluded = self._excluded_by_rules(completed, rules)
+        return completed - excluded
+
+    def _excluded_by_rules(
+        self,
+        completed: set[str],
+        rules: list[DistinctCategoryRule],
+    ) -> set[str]:
+        """
+        Return the set of courses that are excluded because they exceed
+        a category limit. Used by both the checker and the solver.
+        """
+        excluded: set[str] = set()
+        for rule in rules:
+            # Collect all completed courses in this category, in priority order.
+            in_category = [
+                cid for cid in rule.course_ids
+                if cid in completed
+            ]
+            # Also catch aliases: if a cross-listed alias is in completed, include it.
+            for cid in rule.course_ids:
+                course = self.courses.get(cid)
+                if course:
+                    for alias in course.cross_listed_as:
+                        if alias in completed and cid not in in_category:
+                            in_category.append(cid)
+
+            # Keep the first max_courses, mark the rest as excluded.
+            for extra in in_category[rule.max_courses:]:
+                excluded.add(extra)
+                # Also exclude aliases of the excluded course.
+                course = self.courses.get(extra)
+                if course:
+                    excluded.update(course.cross_listed_as)
+
+        return excluded

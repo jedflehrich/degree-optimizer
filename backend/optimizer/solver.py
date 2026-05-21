@@ -138,8 +138,14 @@ class Optimizer:
         recommendations: list[CourseRecommendation] = []
         unresolved: list[GroupStatus] = []
 
+        # Build a category budget: tracks remaining slots for each distinct
+        # category rule across all target programs. When a slot is used up,
+        # further courses from that category are ineligible for that program.
+        category_budget = self._build_category_budget(target_programs, completed)
+
         # Process unsatisfied groups in a fixed order so results are deterministic.
-        for _program_id, group in unsatisfied:
+        for program_id, group in unsatisfied:
+            program = next((p for p in target_programs if p.program_id == program_id), None)
             self._resolve_group(
                 group=group,
                 completed=completed,
@@ -147,6 +153,8 @@ class Optimizer:
                 recommendations=recommendations,
                 unresolved=unresolved,
                 all_unsatisfied=unsatisfied,
+                category_budget=category_budget,
+                program=program,
             )
 
         # Step 4: Resolve prerequisite chains.
@@ -222,6 +230,8 @@ class Optimizer:
         recommendations: list[CourseRecommendation],
         unresolved: list[GroupStatus],
         all_unsatisfied: list[tuple[str, GroupStatus]],
+        category_budget: dict[str, int] | None = None,
+        program=None,
     ) -> None:
         """
         Decide which course(s) to recommend for one unsatisfied group.
@@ -229,15 +239,14 @@ class Optimizer:
         - For ALL_REQUIRED: add every missing course (no choice).
         - For ONE_OF / N_COURSES / N_CREDITS: score options and pick the best.
         - For open-ended groups (no course list): mark as unresolved.
+        - Respects distinct category rules: courses from an exhausted category
+          (e.g. second probability course in DS) are skipped.
         """
         if not group.eligible_remaining and not group.missing_required:
-            # Open-ended group (e.g. "choose any ISyE elective") — can't pick
-            # automatically without more student input.
             if group not in unresolved:
                 unresolved.append(group)
             return
 
-        # Courses to consider: missing required + eligible remaining.
         candidates = list(set(group.missing_required + group.eligible_remaining))
 
         if not candidates:
@@ -245,14 +254,19 @@ class Optimizer:
                 unresolved.append(group)
             return
 
-        # Score each candidate by how many unsatisfied groups it appears in
-        # across ALL target programs.
+        # Filter out candidates that would violate a category budget.
+        if category_budget and program:
+            candidates = [
+                c for c in candidates
+                if self._category_available(c, program, category_budget)
+            ]
+
+        # Score remaining candidates by cross-program overlap.
         scored = [
             (course_id, self._overlap_score(course_id, all_unsatisfied))
             for course_id in candidates
             if course_id not in already_recommended
         ]
-        # Sort by score descending (most overlap first).
         scored.sort(key=lambda x: x[1], reverse=True)
 
         if group.group_id.endswith("missing_required") or group.missing_required:
@@ -271,6 +285,7 @@ class Optimizer:
                 if course_id in already_recommended:
                     continue
                 self._add_recommendation(course_id, score, all_unsatisfied, already_recommended, recommendations)
+                self._consume_category_budget(course_id, program, category_budget)
                 credits_still_needed -= self._get_credits(course_id)
                 courses_still_needed -= 1
 
@@ -376,6 +391,48 @@ class Optimizer:
                 prereq_only.append(prereq_rec)
                 # Also check this prereq's own prerequisites.
                 queue.append(best)
+
+    def _build_category_budget(self, programs, completed: set[str]) -> dict[str, int]:
+        """
+        Build a dict mapping rule_id -> remaining slots.
+
+        Starts each rule at max_courses and decrements for every course already
+        completed that belongs to that category. So if a student already has
+        STAT 311 (probability), the ds_probability budget starts at 0 and the
+        solver won't recommend MATH 431 for any DS elective group.
+        """
+        budget: dict[str, int] = {}
+        expanded = self.checker._expand_completed(completed)
+        for program in programs:
+            for rule in program.distinct_category_rules:
+                used = sum(1 for cid in rule.course_ids if cid in expanded)
+                budget[rule.id] = max(0, rule.max_courses - used)
+        return budget
+
+    def _category_available(
+        self,
+        course_id: str,
+        program,
+        budget: dict[str, int],
+    ) -> bool:
+        """
+        Return False if recommending this course would violate a category rule.
+        A budget of 0 means the slot is already filled — skip this course.
+        """
+        if not program:
+            return True
+        for rule in program.distinct_category_rules:
+            if course_id in rule.course_ids and budget.get(rule.id, 1) <= 0:
+                return False
+        return True
+
+    def _consume_category_budget(self, course_id: str, program, budget: dict[str, int]) -> None:
+        """Decrement the budget for any category this course belongs to."""
+        if not program or not budget:
+            return
+        for rule in program.distinct_category_rules:
+            if course_id in rule.course_ids:
+                budget[rule.id] = max(0, budget.get(rule.id, 1) - 1)
 
     def _get_credits(self, course_id: str) -> int:
         course = self.courses.get(course_id)

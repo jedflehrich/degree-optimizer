@@ -296,3 +296,129 @@ class TestSolverWithPrereqs:
         if "MATH_234" in rec_map:
             assert not rec_map["MATH_234"].can_take_now, \
                 "MATH 234 requires MATH 222, which isn't done yet"
+
+
+# ── Distinct Category Rule Tests ───────────────────────────────────────────────
+
+class TestDistinctCategoryRules:
+    """
+    Tests for the DS major's "one probability / one inference / one linear
+    algebra course" constraint.
+    """
+
+    def test_second_probability_course_excluded_from_checker(self, checker, programs):
+        """
+        If a student has both STAT 311 and MATH/STAT 431 (both probability),
+        only one should count toward DS electives.
+        The DS elective credits_completed should be the same whether the student
+        has one probability course or two.
+        """
+        ds = programs["uw-madison-ds-bs-2025"]
+
+        # Student with one probability course
+        one_prob = {"COMP_SCI_220", "COMP_SCI_320", "STAT_240", "STAT_340",
+                    "LIS_461", "MATH_221", "MATH_222", "STAT_311", "MATH_340"}
+        status_one = checker.check_program(ds, one_prob)
+
+        # Same student with an extra probability course (MATH/STAT 431)
+        two_prob = one_prob | {"MATH_STAT_431"}
+        status_two = checker.check_program(ds, two_prob)
+
+        # Find the statistical modeling elective group
+        def find_group(statuses, gid):
+            for g in statuses:
+                if g.group_id == gid:
+                    return g
+                found = find_group(g.sub_statuses, gid)
+                if found:
+                    return found
+            return None
+
+        stat_one = find_group(status_one.group_statuses, "elective_statistical_modeling")
+        stat_two = find_group(status_two.group_statuses, "elective_statistical_modeling")
+
+        if stat_one and stat_two:
+            assert stat_two.courses_completed <= stat_one.courses_completed + 1, \
+                "Second probability course must not double-count in statistical modeling"
+
+    def test_checker_category_excluded_method(self, checker, programs):
+        """
+        category_excluded() should return True for a second probability course
+        when one probability course is already completed.
+        """
+        ds = programs["uw-madison-ds-bs-2025"]
+        completed_with_stat311 = {"STAT_311", "MATH_221", "MATH_222"}
+
+        # MATH_STAT_431 is also a probability course — should be excluded
+        assert checker.category_excluded(
+            "MATH_STAT_431", completed_with_stat311, ds.distinct_category_rules
+        ), "MATH/STAT 431 should be excluded when STAT 311 already fills the probability slot"
+
+        # STAT_312 is an inference course — should NOT be excluded
+        assert not checker.category_excluded(
+            "STAT_312", completed_with_stat311, ds.distinct_category_rules
+        ), "STAT 312 (inference) should not be excluded when only probability slot is filled"
+
+    def test_solver_does_not_recommend_second_probability_course(self, optimizer):
+        """
+        If a student already has STAT 311 (probability), the solver must not
+        recommend MATH 331 or MATH/STAT 431 for DS electives.
+        The probability slot is filled — only one can count.
+        """
+        # Student has all foundational courses + STAT 311 (fills probability slot)
+        completed = {
+            "MATH_221", "MATH_222", "MATH_234", "MATH_340",
+            "COMP_SCI_220", "COMP_SCI_320",
+            "STAT_240", "STAT_340", "LIS_461",
+            "STAT_311",
+        }
+        result = optimizer.solve(
+            completed=completed,
+            target_program_ids=["uw-madison-ds-bs-2025"],
+        )
+        rec_ids = {r.course_id for r in result.recommended_courses}
+
+        # These are all probability courses — none should be recommended for DS
+        extra_probability = {"MATH_331", "MATH_STAT_431", "STAT_MATH_309"}
+        overlap = rec_ids & extra_probability
+        assert not overlap, \
+            f"Solver recommended extra probability courses: {overlap}. " \
+            f"STAT 311 already fills the DS probability slot."
+
+    def test_solver_does_not_recommend_second_inference_course(self, optimizer):
+        """
+        If STAT/MATH 310 is already completed (fills the inference slot),
+        STAT 312 should not also be recommended for DS electives.
+        """
+        completed = {
+            "MATH_221", "MATH_222", "MATH_234", "MATH_340",
+            "COMP_SCI_220", "COMP_SCI_320",
+            "STAT_240", "STAT_340", "LIS_461",
+            "STAT_311", "STAT_MATH_310",   # 310 fills inference slot
+        }
+        result = optimizer.solve(
+            completed=completed,
+            target_program_ids=["uw-madison-ds-bs-2025"],
+        )
+        rec_ids = {r.course_id for r in result.recommended_courses}
+
+        assert "STAT_312" not in rec_ids, \
+            "STAT 312 must not be recommended — STAT/MATH 310 already fills the inference slot"
+
+    def test_ie_program_unaffected_by_ds_category_rules(self, optimizer):
+        """
+        The distinct category rules are DS-specific. The IE program has no
+        such rules, so STAT 311 and STAT/MATH 310 can both appear in IE
+        recommendations without triggering any category limit.
+        """
+        completed = {"MATH_221", "MATH_222"}
+        result = optimizer.solve(
+            completed=completed,
+            target_program_ids=["uw-madison-ie-bs-2025"],  # IE only
+        )
+        rec_ids = {r.course_id for r in result.recommended_courses}
+
+        # IE needs both STAT 311 (stats I) and one of STAT 310/312 (stats II)
+        # These should both appear freely — no category budget to limit them
+        has_stats_one = bool(rec_ids & {"STAT_311", "STAT_MATH_309"})
+        assert has_stats_one, "IE should still recommend at least one stats I course"

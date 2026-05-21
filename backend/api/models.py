@@ -34,7 +34,26 @@ RequirementGroup.model_rebuild()
 class ProgramOverlapRule(BaseModel):
     with_program_id: str
     policy: OverlapPolicy
-    max_overlap_credits: Optional[int] = None  # only used when policy = CAPPED
+    max_overlap_credits: Optional[int] = None
+
+
+class DistinctCategoryRule(BaseModel):
+    """
+    Limits how many courses from a named category can count toward
+    any single program's requirements.
+
+    Example — DS major rule:
+        "Only one probability course (STAT 311, STAT/MATH 309, MATH 331,
+         or MATH/STAT 431) may count toward the Data Science major."
+
+    This is separate from cross-listing (same course, different codes).
+    These are genuinely different courses that happen to cover the same
+    mathematical territory, and the university only awards credit for one.
+    """
+    id: str                    # e.g. "ds_probability"
+    description: str
+    max_courses: int = 1       # how many from this category can count
+    course_ids: list[str]      # all course IDs belonging to this category  # only used when policy = CAPPED
 
 
 class Program(BaseModel):
@@ -49,6 +68,9 @@ class Program(BaseModel):
     in_major_credits_required: Optional[int] = None
     gpa_required: float = 2.0
     overlap_rules: list[ProgramOverlapRule] = []
+    # Rules that cap how many courses from a shared mathematical category
+    # (probability, inference, linear algebra) can count toward this program.
+    distinct_category_rules: list[DistinctCategoryRule] = []
     requirement_groups: list[RequirementGroup]
 
 

@@ -20,6 +20,26 @@
       "max_overlap_credits": null
     }
   ],
+  "distinct_category_rules": [
+    {
+      "id": "ds_probability",
+      "description": "Only one probability course may count toward the DS major.",
+      "max_courses": 1,
+      "course_ids": ["MATH_331", "STAT_MATH_309", "STAT_311", "MATH_STAT_431"]
+    },
+    {
+      "id": "ds_inference",
+      "description": "Only one inference course may count toward the DS major.",
+      "max_courses": 1,
+      "course_ids": ["STAT_MATH_310", "STAT_312"]
+    },
+    {
+      "id": "ds_linear_algebra",
+      "description": "Only one linear algebra course may count toward the DS major.",
+      "max_courses": 1,
+      "course_ids": ["MATH_320", "MATH_340", "MATH_341", "MATH_345", "MATH_375"]
+    }
+  ],
   "requirement_groups": [
     {
       "id": "foundational_math",
