@@ -1,3 +1,3 @@
 [tool.pytest.ini_options]
 pythonpath = ["."]
-testpaths = ["backend/optimizer/tests"]
+testpaths = ["backend/optimizer/tests", "backend/api/tests"]
