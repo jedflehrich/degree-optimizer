@@ -82,6 +82,12 @@ class Course(BaseModel):
     credits: int
     cross_listed_as: list[str] = []          # other IDs that refer to the same course
     prerequisites: list[list[str]] = []      # AND of ORs: [[A], [B, C]] means A AND (B OR C)
+    co_requisites: list[str] = []            # must be taken in the same semester as this course
+    concurrent_prereqs: list[str] = []       # prerequisite IDs where concurrent enrollment is
+                                             # allowed — the student may be enrolled in this course
+                                             # and the listed prereq(s) simultaneously.
+                                             # Example: if PHYS_202 lists MATH_222 here, both can
+                                             # be scheduled in the same semester.
     offered: list[str] = []                  # ["fall", "spring", "summer"]
     is_upper_level: bool = False             # counts toward upper-level credit requirement
     notes: Optional[str] = None

@@ -1,4 +1,10 @@
 fastapi
 uvicorn[standard]
 pydantic
-httpx  # required by FastAPI TestClient
+httpx       # required by FastAPI TestClient
+pdfplumber         # PDF text extraction for DARS import
+pypdf              # low-level PDF utilities
+python-multipart   # required by FastAPI for file uploads (UploadFile)
+python-dotenv      # load .env file into os.environ
+# NOTE: we call the Supabase REST API directly via httpx (already listed above)
+# so the 'supabase' Python package is NOT needed.

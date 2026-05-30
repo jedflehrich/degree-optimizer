@@ -14,7 +14,12 @@ from backend.api.models import Program, Course
 # where Python is invoked from.
 DATA_DIR = Path(__file__).parent.parent / "data" / "uw_madison"
 PROGRAMS_DIR = DATA_DIR / "programs"
-COURSES_FILE = DATA_DIR / "courses.json"
+
+# Prefer the merged catalog (scraped + hand-curated prereqs) when available;
+# fall back to the original hand-curated file so the app always works.
+_MERGED  = DATA_DIR / "courses_merged.json"
+_CURATED = DATA_DIR / "courses.json"
+COURSES_FILE = _MERGED if _MERGED.exists() else _CURATED
 
 
 def load_program(filename: str) -> Program:

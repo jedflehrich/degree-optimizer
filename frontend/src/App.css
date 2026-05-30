@@ -11,6 +11,295 @@
 }
 
 
+/* ---- Auth bar (top of page) ------------------------------ */
+
+.auth-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 0 6px;
+  margin-bottom: 4px;
+  gap: 8px;
+}
+
+.auth-bar__signin {
+  font-size: 13px;
+  padding: 6px 14px;
+  color: var(--text-secondary);
+}
+
+.auth-bar__user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.auth-bar__email {
+  font-size: 13px;
+  color: var(--text-secondary);
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.auth-bar__save {
+  font-size: 13px;
+  padding: 6px 14px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.auth-bar__save--saved {
+  color: #16a34a;
+  border-color: #16a34a;
+}
+
+.auth-bar__save--error {
+  color: var(--uw-red);
+  border-color: var(--uw-red);
+}
+
+
+/* ---- Auth modal overlay ---------------------------------- */
+
+.auth-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.auth-modal {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px 28px;
+  width: 100%;
+  max-width: 420px;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+
+.auth-modal__close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  line-height: 1;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0 4px;
+}
+.auth-modal__close:hover { color: var(--text-primary); }
+
+.auth-modal__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 6px;
+}
+
+.auth-modal__sub {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0 0 24px;
+}
+
+.auth-modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-modal__label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.auth-modal__input {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  width: 100%;
+  box-sizing: border-box;
+}
+.auth-modal__input:focus {
+  outline: none;
+  border-color: var(--uw-red);
+  box-shadow: 0 0 0 2px rgba(197,5,12,0.1);
+}
+
+.auth-modal__error {
+  font-size: 13px;
+  color: var(--uw-red);
+  margin: 0;
+}
+
+.auth-modal__success {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px 16px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  color: #166534;
+}
+
+.auth-modal__submit {
+  width: 100%;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.auth-modal__toggle {
+  margin: 18px 0 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-align: center;
+}
+.auth-modal__toggle button {
+  background: none;
+  border: none;
+  color: var(--uw-red);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
+
+
+/* ---- Plans modal ----------------------------------------- */
+
+.plans-modal {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px 28px;
+  width: 100%;
+  max-width: 560px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+
+.plans-modal__empty {
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 24px 0;
+  margin: 0;
+}
+
+.plans-modal__list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.plans-modal__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+}
+
+.plans-modal__info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.plans-modal__name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.plans-modal__programs {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.plans-modal__date {
+  font-size: 12px;
+  color: var(--text-muted, var(--text-secondary));
+}
+
+.plans-modal__actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+
+/* ---- Load banner ----------------------------------------- */
+
+.load-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.load-banner--info {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #1e40af;
+}
+
+.load-banner--error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+}
+
+.load-banner__close {
+  background: none;
+  border: none;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  color: inherit;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+.load-banner__close:hover { opacity: 1; }
+
+
 /* ---- Utility: Buttons ------------------------------------ */
 
 .btn {
@@ -53,6 +342,22 @@
   padding: 14px 28px;
   font-size: 16px;
   border-radius: var(--radius-lg);
+}
+
+.btn--sm {
+  padding: 3px 10px;
+  font-size: 12px;
+}
+
+.clear-all-btn {
+  align-self: center;
+  color: var(--text-tertiary, #999);
+  border-color: var(--border);
+  font-size: 12px;
+}
+.clear-all-btn:hover {
+  color: var(--uw-red);
+  border-color: var(--uw-red);
 }
 
 .btn__spinner {
@@ -103,6 +408,11 @@
   color: var(--red);
 }
 
+.badge--coreq {
+  background: #eef2ff;
+  color: #4338ca;
+  border: 1px solid #c7d2fe;
+}
 
 /* ---- Utility: Alerts ------------------------------------- */
 
@@ -125,11 +435,92 @@
   border: 1px solid var(--amber-border);
 }
 
+.alert--info {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+
+
+/* ---- Profile Banner -------------------------------------- */
+
+.profile-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 20px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.profile-banner__left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.profile-banner__greeting {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.profile-banner__saved {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.profile-banner__right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.profile-banner__name-input {
+  padding: 7px 12px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--text-primary);
+  background: var(--bg-surface);
+  outline: none;
+  width: 200px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.profile-banner__name-input:focus {
+  border-color: var(--uw-red);
+  box-shadow: 0 0 0 3px rgba(197,5,12,.1);
+  background: var(--bg);
+}
+.profile-banner__name-input::placeholder {
+  color: var(--text-muted);
+}
+
+.profile-banner__clear {
+  background: none;
+  border: none;
+  font-size: 13px;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.profile-banner__clear:hover {
+  color: var(--red);
+}
+
 
 /* ---- Setup view ------------------------------------------ */
 
 .setup {
-  padding-top: 48px;
+  padding-top: 20px;
 }
 
 .setup__header {
@@ -218,36 +609,93 @@
   font-size: 14px;
 }
 
-.program-picker {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 12px;
+/* ---- Program Picker Dropdown ----------------------------- */
+
+.program-picker-dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.program-card {
+.program-picker-dropdown__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--bg-surface);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  color: var(--text-primary);
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.program-picker-dropdown__trigger:hover {
+  border-color: var(--border-strong);
+}
+
+.program-picker-dropdown__trigger--open {
+  border-color: var(--uw-red);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.program-picker-dropdown__label {
+  flex: 1;
+  color: var(--text-primary);
+}
+
+.program-picker-dropdown__chevron {
+  font-size: 11px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.program-picker-dropdown__panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: var(--bg-surface);
+  border: 2px solid var(--uw-red);
+  border-top: none;
+  border-bottom-left-radius: var(--radius-md);
+  border-bottom-right-radius: var(--radius-md);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.program-picker-dropdown__option {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  padding: 16px;
-  border: 2px solid var(--border);
-  border-radius: var(--radius-md);
+  padding: 12px 16px;
   cursor: pointer;
-  transition: border-color 0.15s, background 0.15s;
   user-select: none;
+  transition: background 0.1s;
 }
 
-.program-card:hover {
-  border-color: var(--border-strong);
-  background: var(--bg-surface);
+.program-picker-dropdown__option:not(:last-child) {
+  border-bottom: 1px solid var(--border);
 }
 
-.program-card--checked {
-  border-color: var(--uw-red);
+.program-picker-dropdown__option:hover {
+  background: var(--bg-hover, #f5f5f5);
+}
+
+.program-picker-dropdown__option--checked {
   background: var(--uw-red-light);
 }
 
-.program-card input[type="checkbox"] {
-  margin-top: 2px;
+.program-picker-dropdown__checkbox {
+  margin-top: 3px;
   accent-color: var(--uw-red);
   width: 16px;
   height: 16px;
@@ -255,27 +703,75 @@
   cursor: pointer;
 }
 
-.program-card__body {
+.program-picker-dropdown__option-body {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 }
 
-.program-card__name {
+.program-picker-dropdown__option-name {
   font-size: 15px;
   font-weight: 600;
   color: var(--text-primary);
 }
 
-.program-card__meta {
+.program-picker-dropdown__option-meta {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.program-card__year {
+.program-picker-dropdown__option-year {
   font-size: 12px;
   color: var(--text-muted);
+}
+
+.program-picker-dropdown__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.program-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px 6px 12px;
+  background: var(--uw-red-light);
+  border: 1px solid var(--uw-red);
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.program-chip__name {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.program-chip__badge {
+  font-size: 11px;
+}
+
+.program-chip__remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1;
+  padding: 0;
+  transition: background 0.1s, color 0.1s;
+}
+
+.program-chip__remove:hover {
+  background: var(--uw-red);
+  color: white;
 }
 
 
@@ -461,6 +957,63 @@
   color: var(--text-secondary);
 }
 
+/* ---- Progress bar ---------------------------------------- */
+.progress-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.progress-block__labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.progress-block__label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.progress-block__pct {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--uw-red);
+}
+
+.progress-bar {
+  height: 14px;
+  background: var(--border);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.progress-bar__fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--uw-red) 0%, #e85d6a 100%);
+  transition: width 0.6s ease;
+  min-width: 4px;
+}
+
+/* Light-green segment for manually planned (selected) courses */
+.progress-bar__fill--planned {
+  background: #86efac;
+  transition: width 0.6s ease;
+}
+
+.progress-block__sub {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.progress-planned-label {
+  color: var(--green);
+}
+
+/* ---- Summary Stats --------------------------------------- */
 .summary-stats {
   display: flex;
   align-items: center;
@@ -838,6 +1391,1386 @@
 .unresolved__name {
   flex: 1;
   color: var(--text-primary);
+}
+
+
+/* ---- AP Input -------------------------------------------- */
+
+.ap-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ap-input__row {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.ap-input__search-wrap {
+  position: relative;
+  flex: 1;
+}
+
+.ap-dropdown {
+  /* inherits .course-dropdown styles */
+}
+
+.ap-input__score-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.ap-input__score-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.ap-input__score-select {
+  padding: 9px 12px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-family: inherit;
+  background: var(--bg);
+  color: var(--text-primary);
+  cursor: pointer;
+  outline: none;
+  width: 72px;
+}
+.ap-input__score-select:focus {
+  border-color: var(--uw-red);
+  box-shadow: 0 0 0 3px rgba(197,5,12,.1);
+}
+.ap-input__score-select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Preview box shown after selecting exam + score */
+.ap-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px;
+  background: var(--blue-light);
+  border: 1px solid #93c5fd;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+}
+
+.ap-preview__label {
+  color: var(--blue);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.ap-preview__desc {
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.ap-preview__courses {
+  color: var(--text-secondary);
+}
+
+.ap-preview__generic {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.ap-preview__note {
+  color: var(--amber);
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+/* Load-error banner inside APInput */
+.ap-load-error {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #856404;
+}
+.ap-load-error .btn {
+  padding: 4px 12px;
+  font-size: 12px;
+}
+
+/* List of already-added AP entries */
+.ap-entries {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ap-entry {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: var(--green-light);
+  border: 1px solid #86efac;
+  border-radius: var(--radius-md);
+}
+
+.ap-entry__info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+
+.ap-entry__name {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.ap-entry__desc {
+  color: var(--green);
+  font-weight: 500;
+}
+
+.ap-entry__generic {
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 12px;
+}
+
+.ap-entry__remove {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 4px;
+  flex-shrink: 0;
+}
+.ap-entry__remove:hover {
+  color: var(--red);
+}
+
+
+/* ---- Requirements Panel ---------------------------------- */
+
+.req-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.req-panel__header {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+}
+
+.req-panel__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.req-panel__desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.req-program-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.req-program-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--uw-red);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--uw-red-light);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Badge shown next to the program name when all requirements are complete or planned */
+.req-program-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  padding: 2px 9px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+/* All requirements already completed (backend confirms) */
+.req-program-badge--done {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #86efac;
+}
+
+/* All remaining requirements have been selected by the user */
+.req-program-badge--planned {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #6ee7b7;
+}
+
+.req-group-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.req-group {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.req-group__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  flex-wrap: wrap;
+}
+
+.req-group__name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.req-group__header-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.req-group__need {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.req-group__need--progress {
+  color: var(--green);
+  font-weight: 600;
+}
+
+.req-group__tag {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 99px;
+  background: var(--bg-surface);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+
+.req-group__tag--required {
+  background: var(--blue-light);
+  color: var(--blue);
+  border-color: #93c5fd;
+}
+
+.req-group__courses {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  border-top: 1px solid var(--border);
+}
+
+.req-group__show-more {
+  background: none;
+  border: none;
+  padding: 8px 16px;
+  font-size: 13px;
+  color: var(--text-muted);
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.1s;
+}
+.req-group__show-more:hover {
+  color: var(--text-primary);
+}
+
+.req-group__empty {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+  padding: 4px 0;
+  margin: 0;
+}
+
+.req-group__open-ended {
+  padding: 4px 0;
+}
+
+.req-group__open-ended-applied {
+  font-size: 0.82rem;
+  color: var(--green);
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.req-group__completed-list {
+  margin-bottom: 6px;
+}
+.req-group__completed-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin: 0 0 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Course option row */
+.course-option {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background 0.1s;
+  background: var(--bg-surface);
+  outline: none;
+}
+
+.course-option:not(.course-option--locked):hover {
+  background: var(--bg-hover);
+}
+
+.course-option--selected {
+  background: var(--green-light);
+}
+
+.course-option--overlap.course-option--selected {
+  background: var(--overlap-light);
+}
+
+.course-option--locked {
+  cursor: default;
+  background: var(--bg-surface);
+}
+
+.course-option--alt {
+  opacity: 0.8;
+}
+
+.course-option__check {
+  font-size: 14px;
+  width: 16px;
+  text-align: center;
+  flex-shrink: 0;
+  color: var(--green);
+}
+
+.course-option--selected .course-option__check { color: var(--green); }
+.course-option:not(.course-option--selected) .course-option__check { color: var(--border-strong); }
+
+.course-option__id {
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--text-primary);
+  white-space: nowrap;
+  min-width: 110px;
+}
+
+.course-option__name {
+  font-size: 13px;
+  color: var(--text-secondary);
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.course-option__badges {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.badge--recommended {
+  background: var(--green-light);
+  color: var(--green);
+  border: 1px solid #86efac;
+}
+
+.badge--counted-for {
+  background: #f0f4ff;
+  color: #4a6fa5;
+  border: 1px solid #c3d3f0;
+  font-style: italic;
+}
+
+/* ---- ExcludedCourseNote — grayed-out "counted for" ghost entry ----------- */
+
+.course-option--excluded {
+  opacity: 0.6;
+  cursor: default;
+  pointer-events: none;
+  background: var(--bg-surface);
+  border-style: dashed;
+}
+
+.course-option--excluded .course-option__id {
+  color: var(--text-secondary);
+}
+
+.course-option__check--excluded {
+  color: var(--text-muted) !important;
+  font-size: 12px;
+}
+
+.req-group__excluded {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 4px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border);
+}
+
+/* Inline prereq / unlocks info on a course option — breaks to its own row */
+.course-option__prereq-info {
+  flex: 0 0 100%;       /* full-width row */
+  margin: -4px 0 2px 26px; /* indent past check + gap */
+  font-size: 11.5px;
+  line-height: 1.4;
+  padding: 0;
+}
+
+.course-option__prereq-info--needs {
+  color: var(--amber);
+}
+
+.course-option__prereq-info--coreq {
+  color: #4338ca;
+}
+
+.course-option__prereq-info--concurrent {
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.course-option__prereq-info--unlocks {
+  color: var(--green);
+}
+
+/* Prereqs note */
+.req-prereqs-note {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  font-size: 13px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.req-prereqs-note__label {
+  font-weight: 600;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.req-prereqs-note__list {
+  color: var(--text-muted);
+}
+
+.req-unresolved {
+  margin: 0;
+}
+
+.req-empty {
+  padding: 32px;
+  text-align: center;
+  font-size: 16px;
+  color: var(--green);
+}
+
+.req-panel__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0 4px;
+}
+
+.req-panel__count {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* Extra-course warning (shown before "Build My Semester Plan" confirms) */
+.req-extra-warning {
+  margin: 12px 0 4px;
+  padding: 14px 16px;
+  background: var(--amber-light);
+  border: 1px solid var(--amber-border);
+  border-radius: var(--radius-md);
+}
+
+.req-extra-warning__title {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--amber);
+  margin: 0 0 6px;
+}
+
+.req-extra-warning__body {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0 0 10px;
+}
+
+.req-extra-warning__list {
+  margin: 0 0 12px;
+  padding-left: 18px;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.req-extra-warning__list li {
+  margin-bottom: 3px;
+}
+
+.req-extra-warning__actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Group row options (in program checklist) */
+.group-row__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 4px 40px 8px;
+}
+
+.group-option {
+  font-size: 11px;
+  padding: 2px 8px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  cursor: default;
+}
+
+.group-option--more {
+  cursor: pointer;
+  background: none;
+  border-style: dashed;
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 11px;
+}
+.group-option--more:hover {
+  color: var(--text-primary);
+  background: var(--bg-hover);
+}
+
+
+/* ---- DARS-style requirement sections --------------------- */
+
+.dars-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.dars-section {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+/* Satisfied: green left accent */
+.dars-section--satisfied {
+  border-left: 3px solid var(--green);
+}
+
+/* Unsatisfied: amber left accent */
+.dars-section--unsatisfied {
+  border-left: 3px solid var(--amber);
+}
+
+/* Header row — always a <button> for keyboard/screen-reader support */
+.dars-section__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  transition: background 0.1s;
+}
+
+.dars-section--satisfied .dars-section__header {
+  background: var(--green-light);
+}
+.dars-section--satisfied .dars-section__header:hover {
+  background: #d1fae5;
+}
+
+.dars-section--unsatisfied .dars-section__header {
+  background: var(--amber-light);
+}
+.dars-section--unsatisfied .dars-section__header:hover {
+  background: #fef3c7;
+}
+
+.dars-section__icon {
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+  width: 18px;
+  text-align: center;
+}
+.dars-section__icon--done { color: var(--green); }
+.dars-section__icon--warn { color: var(--amber); }
+
+.dars-section__name {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.dars-section__status {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 1px 7px;
+  border-radius: 99px;
+  white-space: nowrap;
+}
+.dars-section__status--done {
+  background: #d1fae5;
+  color: var(--green);
+}
+.dars-section__status--warn {
+  background: var(--amber-light);
+  color: var(--amber);
+  border: 1px solid var(--amber-border);
+}
+
+.dars-section__chevron {
+  font-size: 9px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+/* Expandable body */
+.dars-section__content {
+  border-top: 1px solid var(--border);
+}
+
+/* Leaf-row container inside unsatisfied section */
+.dars-section__rows {
+  padding: 6px;
+}
+
+/* Empty-state note */
+.dars-section__empty-note {
+  padding: 10px 14px;
+  font-size: 13px;
+  color: var(--text-muted);
+  font-style: italic;
+  margin: 0;
+}
+
+/* ── Completed-courses list (satisfied section, expanded) ── */
+
+.dars-completed-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.dars-completed-course {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 14px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-surface);
+}
+.dars-completed-course:last-child {
+  border-bottom: none;
+}
+
+.dars-completed-course__id {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--text-primary);
+  min-width: 100px;
+  white-space: nowrap;
+}
+
+.dars-completed-course__name {
+  flex: 1;
+  color: var(--text-secondary);
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dars-completed-course__credits {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--green);
+  background: #d1fae5;
+  padding: 1px 7px;
+  border-radius: 99px;
+  flex-shrink: 0;
+}
+
+
+/* ---- Semester Plan --------------------------------------- */
+
+.sem-plan {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sem-plan__gpa-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 16px;
+  background: #fffbeb;
+  border: 1px solid #f59e0b;
+  border-radius: var(--radius-md);
+  font-size: 13.5px;
+  color: #92400e;
+  line-height: 1.5;
+}
+.sem-plan__gpa-icon {
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.sem-plan__topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.sem-plan__controls {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.sem-control {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sem-control__label {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.sem-control__select {
+  padding: 8px 12px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-family: inherit;
+  background: var(--bg);
+  color: var(--text-primary);
+  outline: none;
+  cursor: pointer;
+}
+.sem-control__select:focus {
+  border-color: var(--uw-red);
+}
+
+.sem-plan__summary {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.sem-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 24px;
+}
+
+.sem-stat--div {
+  width: 1px;
+  height: 36px;
+  background: var(--border);
+  padding: 0;
+}
+
+.sem-stat__val {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.sem-stat__lbl {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sem-plan__advisor-note {
+  flex: 1;
+  font-size: 13px;
+  color: var(--text-secondary);
+  padding-left: 24px;
+  border-left: 1px solid var(--border);
+  margin-left: 8px;
+  line-height: 1.5;
+}
+
+/* Semester grid */
+.sem-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+.sem-col {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.sem-col--heavy {
+  border-color: var(--amber-border);
+}
+
+.sem-col__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.sem-col__name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.sem-col__credits {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--border);
+  padding: 2px 8px;
+  border-radius: 99px;
+}
+
+.sem-col__credits--heavy {
+  background: var(--amber-light);
+  color: var(--amber);
+}
+
+.sem-col__credits--light {
+  background: var(--blue-light);
+  color: var(--blue);
+}
+
+.sem-col__courses {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 8px;
+}
+
+.sem-col__warning {
+  font-size: 11px;
+  color: var(--amber);
+  padding: 6px 14px 10px;
+}
+
+/* Semester course card */
+.sem-course {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  overflow: hidden;
+}
+
+.sem-course--overlap {
+  border-color: var(--overlap-border);
+  background: var(--overlap-light);
+}
+
+.sem-course--prereq {
+  opacity: 0.75;
+}
+
+.sem-course__top {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.sem-course__id {
+  font-size: 12px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--text-primary);
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sem-course__badges {
+  display: flex;
+  gap: 3px;
+  flex-shrink: 0;
+}
+
+.sem-course__detail {
+  padding: 6px 10px 10px;
+  border-top: 1px solid var(--border);
+}
+
+.sem-course__name {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 2px;
+}
+
+.sem-course__satisfies {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+
+/* ---- Results topbar -------------------------------------- */
+
+.results__topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+/* Override margin set by the old .results__back rule when it's inside the topbar */
+.results__topbar .results__back {
+  margin-bottom: 0;
+}
+
+/* Group the import buttons together on the right */
+.results__import-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.results__import-btn {
+  color: var(--text-secondary);
+  border-color: var(--border-strong);
+}
+
+.results__import-btn--active {
+  color: var(--green);
+  border-color: var(--green);
+  background: var(--green-light);
+}
+.results__import-btn--active:hover {
+  background: #d1fae5;
+}
+
+
+/* ---- DARS Import panel ----------------------------------- */
+
+.dars-import {
+  background: var(--bg);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dars-import__header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dars-import__title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.dars-import__desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.dars-import__dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 28px 20px;
+  border: 2px dashed var(--border-strong);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  min-height: 100px;
+  text-align: center;
+}
+.dars-import__dropzone:hover,
+.dars-import__dropzone:focus {
+  background: var(--bg-surface);
+  border-color: var(--uw-red);
+  outline: none;
+}
+
+.dars-import__drop-icon {
+  font-size: 28px;
+}
+.dars-import__drop-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.dars-import__drop-hint {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.dars-import__file-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+.dars-import__file-item {
+  font-size: 14px;
+  color: var(--text-primary);
+}
+.dars-import__file-size {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+.dars-import__file-change {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.dars-import__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+
+/* ---- Semester plan: mode toggle -------------------------- */
+
+.sem-plan__mode-toggle {
+  display: flex;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.sem-plan__mode-btn {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  background: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  font-family: inherit;
+}
+.sem-plan__mode-btn + .sem-plan__mode-btn {
+  border-left: 1px solid var(--border-strong);
+}
+.sem-plan__mode-btn:hover {
+  background: var(--bg-surface);
+  color: var(--text-primary);
+}
+.sem-plan__mode-btn--active {
+  background: var(--uw-red);
+  color: #fff;
+}
+.sem-plan__mode-btn--active:hover {
+  background: var(--uw-red-dark);
+  color: #fff;
+}
+
+
+/* ---- Semester column: in-progress variant (DARS mode) ---- */
+
+.sem-col--inp {
+  border-color: var(--blue);
+  border-width: 2px;
+}
+
+.sem-col--inp .sem-col__header {
+  background: var(--blue-light);
+  border-bottom-color: #93c5fd;
+}
+
+.sem-col__inp-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  background: var(--blue);
+  color: #fff;
+  padding: 1px 7px;
+  border-radius: 99px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+/* DARS / Academic Plan course card — subtle green tint to signal "scheduled" */
+.sem-course--dars {
+  background: #f0fdf4;
+  border-color: #86efac;
+}
+
+/* In-progress course within Academic Plan view — blue tint */
+.sem-course--inp {
+  background: #eff6ff;
+  border-color: #93c5fd;
+}
+
+/* "In Progress" badge on individual course card */
+.badge--inp {
+  background: var(--blue);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 1px 7px;
+  border-radius: 99px;
+}
+
+
+/* ---- Program checklist: planned (yellow) state ----------- */
+
+.group-row__icon--planned {
+  color: var(--amber);
+  font-weight: 700;
+}
+
+.program-status__legend {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin: -4px 0 8px;
+}
+
+.program-card-status__planned {
+  color: var(--amber);
+  font-weight: 600;
+}
+
+
+/* ---- Focus Area Picker ------------------------------------ */
+
+.focus-picker {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  margin-bottom: 12px;
+}
+
+.focus-picker__label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 8px;
+}
+
+.focus-picker__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.focus-picker__btn {
+  padding: 5px 12px;
+  border-radius: 99px;
+  border: 1.5px solid var(--border);
+  background: #fff;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.focus-picker__btn:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.focus-picker__btn--active {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #fff;
+  font-weight: 600;
+}
+
+.focus-picker__btn--done {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.focus-picker__btn--done.focus-picker__btn--active {
+  background: var(--green);
+  color: #fff;
+}
+
+.focus-picker__hint {
+  font-size: 0.77rem;
+  color: var(--muted);
+  margin: 8px 0 0;
+}
+
+
+/* ---- Progress bar what-if label -------------------------- */
+
+.progress-block__what-if {
+  color: var(--green);
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+
+/* ---- AP credit limit tracker ----------------------------- */
+
+.ap-credit-limit {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 6px 10px;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  margin-top: 8px;
+}
+
+.ap-credit-limit__label {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.ap-credit-limit__count {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.ap-credit-limit--near .ap-credit-limit__count {
+  color: var(--amber);
+}
+
+.ap-credit-limit--over .ap-credit-limit__count {
+  color: #dc2626;
+}
+
+.ap-credit-limit__warning {
+  color: var(--amber);
+  font-weight: 500;
+  width: 100%;
+}
+
+.ap-credit-limit--over .ap-credit-limit__warning {
+  color: #dc2626;
 }
 
 

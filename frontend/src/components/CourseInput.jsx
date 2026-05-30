@@ -73,6 +73,13 @@ export default function CourseInput({ value, onChange }) {
               >×</button>
             </span>
           ))}
+          <button
+            className="btn btn--ghost btn--sm clear-all-btn"
+            onClick={() => onChange([])}
+            title="Remove all completed courses"
+          >
+            Clear all
+          </button>
         </div>
       )}
 

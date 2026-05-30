@@ -1,0 +1,263 @@
+{
+  "program_id": "uw-madison-real-estate-bba-2025",
+  "university": "uw-madison",
+  "name": "Business: Real Estate and Urban Land Economics",
+  "degree": "BBA",
+  "catalog_year": "2025-2026",
+  "total_credits_required": 120,
+  "residency_credits_required": 30,
+  "upper_level_credits_required": null,
+  "in_major_credits_required": 20,
+  "gpa_required": 2.0,
+  "overlap_rules": [],
+  "requirement_groups": [
+    {
+      "id": "bba_liberal_studies_economics",
+      "name": "BBA Liberal Studies — Economics",
+      "description": "Complete one economics principles course.",
+      "type": "one_of",
+      "credits_required": null,
+      "courses_required": 1,
+      "courses": ["ECON_101", "ECON_111"],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "4 credits. Required for all BBA students."
+    },
+    {
+      "id": "bba_liberal_studies_human_behavior",
+      "name": "BBA Liberal Studies — Human Behavior",
+      "description": "Complete one human behavior course.",
+      "type": "one_of",
+      "credits_required": null,
+      "courses_required": 1,
+      "courses": ["PSYCH_202", "SOC_211", "ANTHRO_104", "GEN&WS_102", "HDFS_263"],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "3–4 credits."
+    },
+    {
+      "id": "bba_liberal_studies_calculus",
+      "name": "BBA Liberal Studies — Calculus",
+      "description": "Complete one calculus course (Survey of Calculus 1 level or higher).",
+      "type": "one_of",
+      "credits_required": null,
+      "courses_required": 1,
+      "courses": ["MATH_211", "MATH_217", "MATH_221"],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "3–5 credits."
+    },
+    {
+      "id": "bba_liberal_studies_ethics",
+      "name": "BBA Liberal Studies — Ethics",
+      "description": "Complete one ethics course.",
+      "type": "one_of",
+      "credits_required": null,
+      "courses_required": 1,
+      "courses": ["PHILOS_241", "PHILOS_243", "PHILOS_341", "PHILOS_441", "L_I_S_461"],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "3–4 credits. PHILOS/ENVIR ST 441 is cross-listed."
+    },
+    {
+      "id": "bba_fundamentals",
+      "name": "Business Fundamentals",
+      "description": "All required business fundamentals courses.",
+      "type": "all_required",
+      "credits_required": null,
+      "courses_required": null,
+      "courses": [
+        "GEN_BUS_110",
+        "GEN_BUS_106",
+        "ECON_102",
+        "GEN_BUS_360",
+        "ACCT_I_S_100",
+        "ACCT_I_S_211"
+      ],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "ECON 111 may substitute for ECON 102. Total ~14 credits."
+    },
+    {
+      "id": "bba_analytics",
+      "name": "Business Analytics Sequence",
+      "description": "Complete one of three analytics sequence options.",
+      "type": "one_of",
+      "credits_required": null,
+      "courses_required": 1,
+      "courses": [],
+      "sub_groups": [
+        {
+          "id": "analytics_opt1",
+          "name": "Option 1: GEN BUS Analytics",
+          "description": "GEN BUS 306 + GEN BUS 307",
+          "type": "all_required",
+          "credits_required": null,
+          "courses_required": null,
+          "courses": ["GEN_BUS_306", "GEN_BUS_307"],
+          "sub_groups": [],
+          "distinct_from_groups": [],
+          "notes": "6 credits. Most common option."
+        },
+        {
+          "id": "analytics_opt2",
+          "name": "Option 2: Probability + Stats (Actuarial Science)",
+          "description": "(MATH 331 or STAT/MATH 309) + (GEN BUS 317 or STAT/MATH 310)",
+          "type": "all_required",
+          "credits_required": null,
+          "courses_required": null,
+          "courses": [],
+          "sub_groups": [
+            {
+              "id": "analytics_opt2a",
+              "name": "Probability Course",
+              "description": "MATH 331 or STAT/MATH 309",
+              "type": "one_of",
+              "credits_required": null,
+              "courses_required": 1,
+              "courses": ["MATH_331", "STAT_MATH_309"],
+              "sub_groups": [],
+              "distinct_from_groups": [],
+              "notes": null
+            },
+            {
+              "id": "analytics_opt2b",
+              "name": "Stats II or GEN BUS 317",
+              "description": "GEN BUS 317 or STAT/MATH 310",
+              "type": "one_of",
+              "credits_required": null,
+              "courses_required": 1,
+              "courses": ["GEN_BUS_317", "STAT_MATH_310"],
+              "sub_groups": [],
+              "distinct_from_groups": [],
+              "notes": null
+            }
+          ],
+          "distinct_from_groups": [],
+          "notes": "Recommended for Actuarial Science majors."
+        },
+        {
+          "id": "analytics_opt3",
+          "name": "Option 3: Econometrics (Econ Double Majors)",
+          "description": "ECON 310 + (ECON 400 or ECON 410)",
+          "type": "all_required",
+          "credits_required": null,
+          "courses_required": null,
+          "courses": ["ECON_310"],
+          "sub_groups": [
+            {
+              "id": "analytics_opt3b",
+              "name": "Econometrics II",
+              "description": "ECON 400 or ECON 410",
+              "type": "one_of",
+              "credits_required": null,
+              "courses_required": 1,
+              "courses": ["ECON_400", "ECON_410"],
+              "sub_groups": [],
+              "distinct_from_groups": [],
+              "notes": null
+            }
+          ],
+          "distinct_from_groups": [],
+          "notes": "Recommended for Economics double majors or Econ certificate students."
+        }
+      ],
+      "distinct_from_groups": [],
+      "notes": "6–8 credits."
+    },
+    {
+      "id": "bba_core",
+      "name": "Business Core",
+      "description": "All six required Business Core courses.",
+      "type": "all_required",
+      "credits_required": null,
+      "courses_required": null,
+      "courses": [
+        "FINANCE_300",
+        "MARKETNG_300",
+        "M_H_R_300",
+        "OTM_300",
+        "GEN_BUS_301",
+        "GEN_BUS_400"
+      ],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "18 credits. FINANCE/ECON 300 is cross-listed."
+    },
+    {
+      "id": "bba_signature_one",
+      "name": "Business Signature — Choose One",
+      "description": "Select one course from the signature list.",
+      "type": "one_of",
+      "credits_required": null,
+      "courses_required": 1,
+      "courses": [
+        "INFO_SYS_322",
+        "INTL_BUS_200",
+        "A_A_E_ECON_REAL_EST_URB_R_PL_306",
+        "R_M_I_300"
+      ],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "3 credits. Real Estate students satisfy this automatically with REAL EST 306."
+    },
+    {
+      "id": "bba_signature_two",
+      "name": "Business Signature — Choose Two",
+      "description": "Select two courses from GEN BUS 240, 250, or 308.",
+      "type": "n_courses",
+      "credits_required": null,
+      "courses_required": 2,
+      "courses": [
+        "GEN_BUS_240",
+        "GEN_BUS_250",
+        "GEN_BUS_308"
+      ],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "4 credits total (2 credits each)."
+    },
+    {
+      "id": "real_estate_required",
+      "name": "Real Estate Major Required Courses",
+      "description": "All eight required Real Estate core courses.",
+      "type": "all_required",
+      "credits_required": null,
+      "courses_required": null,
+      "courses": [
+        "A_A_E_ECON_REAL_EST_URB_R_PL_306",
+        "REAL_EST_410",
+        "REAL_EST_411",
+        "REAL_EST_412",
+        "REAL_EST_415",
+        "ECON_REAL_EST_URB_R_PL_420",
+        "REAL_EST_425",
+        "REAL_EST_530"
+      ],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "20 credits total. REAL EST 411 and 412 are 1 credit each; all others are 3 credits. REAL EST/A A E/ECON/URB R PL 306 and REAL EST/ECON/URB R PL 420 are cross-listed."
+    },
+    {
+      "id": "real_estate_electives",
+      "name": "Real Estate Electives (recommended)",
+      "description": "Additional real estate electives — not required but strongly encouraged.",
+      "type": "n_credits",
+      "credits_required": 0,
+      "courses_required": null,
+      "courses": [
+        "REAL_EST_365",
+        "A_A_E_REAL_EST_URB_R_PL_520",
+        "REAL_EST_540",
+        "REAL_EST_550",
+        "REAL_EST_611",
+        "REAL_EST_640",
+        "REAL_EST_651",
+        "REAL_EST_661"
+      ],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "Electives are typically not offered every semester. REAL EST 365 (Contemporary Topics) is an umbrella for innovative offerings — check the Course Guide each semester."
+    }
+  ]
+}

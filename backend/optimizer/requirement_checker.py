@@ -44,6 +44,16 @@ class GroupStatus:
     # Recursive statuses for sub-groups.
     sub_statuses: list["GroupStatus"] = field(default_factory=list)
 
+    # The RequirementType of this group — stored so the solver can decide
+    # whether to recurse into sub_statuses (ALL_REQUIRED) or mark the group
+    # as unresolved and wait for a user override (ONE_OF with sub_groups).
+    group_type: "RequirementType | None" = None
+
+    # Group IDs whose selected courses must NOT also count here.
+    # Copied straight from RequirementGroup.distinct_from_groups so the
+    # frontend can enforce the rule without a separate program-structure fetch.
+    distinct_from_groups: list[str] = field(default_factory=list)
+
 
 @dataclass
 class ProgramStatus:
@@ -144,16 +154,21 @@ class RequirementChecker:
 
     def _expand_completed(self, completed: set[str]) -> set[str]:
         """
-        Add cross-listed aliases to the completed set.
+        Add the canonical primary ID and all cross-listed aliases to the
+        completed set.
 
-        If a student completed ECE_ISYE_570, this ensures ISYE_ECE_570
-        (and any other alias) is also treated as completed.
+        Example: student completed BIOLOGY_151 (an alias of ZOOLOGY_151).
+        Without this fix, only aliases listed in cross_listed_as are added —
+        the primary ID (ZOOLOGY_151) is missed, so basic-science-elective
+        credit isn't recognized.  With the fix, course.id (the primary) is
+        always added alongside the aliases.
         """
         expanded = set(completed)
         for course_id in list(completed):
             course = self.courses.get(course_id)
             if course:
-                expanded.update(course.cross_listed_as)
+                expanded.add(course.id)           # ← add primary ID
+                expanded.update(course.cross_listed_as)  # ← add aliases
         return expanded
 
     def _get_credits(self, course_id: str) -> int:
@@ -174,23 +189,24 @@ class RequirementChecker:
         sub_statuses = [self._check_group(sg, completed) for sg in group.sub_groups]
 
         if group.type == RequirementType.ALL_REQUIRED:
-            return self._check_all_required(group, done_here, not_done_here, sub_statuses)
-
+            status = self._check_all_required(group, done_here, not_done_here, sub_statuses)
         elif group.type == RequirementType.ONE_OF:
-            return self._check_one_of(group, done_here, not_done_here, sub_statuses)
-
+            status = self._check_one_of(group, done_here, not_done_here, sub_statuses)
         elif group.type == RequirementType.N_CREDITS:
-            return self._check_n_credits(group, done_here, not_done_here, sub_statuses)
-
+            status = self._check_n_credits(group, done_here, not_done_here, sub_statuses)
         elif group.type == RequirementType.N_COURSES:
-            return self._check_n_courses(group, done_here, not_done_here, sub_statuses)
+            status = self._check_n_courses(group, done_here, not_done_here, sub_statuses)
+        else:
+            return GroupStatus(
+                group_id=group.id,
+                group_name=group.name,
+                satisfied=False,
+            )
 
-        # Fallback — should never happen if data is valid.
-        return GroupStatus(
-            group_id=group.id,
-            group_name=group.name,
-            satisfied=False,
-        )
+        # Propagate distinct_from_groups so the frontend can enforce it.
+        status.distinct_from_groups = list(group.distinct_from_groups)
+        return status
+
 
     def _check_all_required(
         self,
@@ -209,8 +225,9 @@ class RequirementChecker:
             satisfied=satisfied,
             completed_courses=done,
             missing_required=not_done,
-            eligible_remaining=not_done,
+            eligible_remaining=[],   # ALL_REQUIRED has no optional choices
             sub_statuses=sub_statuses,
+            group_type=RequirementType.ALL_REQUIRED,
         )
 
     def _check_one_of(
@@ -225,16 +242,27 @@ class RequirementChecker:
         any_sub_ok = any(s.satisfied for s in sub_statuses)
         satisfied = any_course_done or any_sub_ok
 
+        # Track credits completed so that when this sub-group is used inside an
+        # N_CREDITS parent, the parent can count the credits correctly.
+        # (e.g. Linear Algebra ONE_OF under the math_307_699 N_CREDITS parent.)
+        credits_done = sum(self._get_credits(c) for c in done)
+
         return GroupStatus(
             group_id=group.id,
             group_name=group.name,
             satisfied=satisfied,
             completed_courses=done,
-            missing_required=[] if satisfied else not_done,
+            # ONE_OF: no individual course is strictly "required" — the student
+            # picks any one option.  Leave missing_required empty so the solver's
+            # _resolve_group takes the CHOICE branch (not the ALL_REQUIRED branch).
+            # eligible_remaining already captures all available options.
+            missing_required=[],
             eligible_remaining=not_done,
+            credits_completed=credits_done,
             courses_completed=len(done),
             courses_still_needed=0 if satisfied else 1,
             sub_statuses=sub_statuses,
+            group_type=RequirementType.ONE_OF,
         )
 
     def _check_n_credits(
@@ -265,6 +293,7 @@ class RequirementChecker:
             credits_still_needed=still_needed,
             eligible_remaining=not_done,
             sub_statuses=sub_statuses,
+            group_type=RequirementType.N_CREDITS,
         )
 
     def _check_n_courses(
@@ -288,6 +317,7 @@ class RequirementChecker:
             courses_still_needed=still_needed,
             eligible_remaining=not_done,
             sub_statuses=sub_statuses,
+            group_type=RequirementType.N_COURSES,
         )
 
     # ------------------------------------------------------------------

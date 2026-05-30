@@ -1,80 +1,3698 @@
 {
   "courses": [
-    {"id": "MATH_217", "subject": "MATH", "number": "217", "name": "Calculus with Algebra and Trigonometry II", "credits": 5, "cross_listed_as": [], "prerequisites": [], "offered": ["fall", "spring"], "is_upper_level": false},
-    {"id": "MATH_221", "subject": "MATH", "number": "221", "name": "Calculus and Analytic Geometry 1", "credits": 5, "cross_listed_as": [], "prerequisites": [], "offered": ["fall", "spring", "summer"], "is_upper_level": false},
-    {"id": "MATH_222", "subject": "MATH", "number": "222", "name": "Calculus and Analytic Geometry 2", "credits": 4, "cross_listed_as": [], "prerequisites": [["MATH_221", "MATH_217"]], "offered": ["fall", "spring", "summer"], "is_upper_level": false},
-    {"id": "MATH_234", "subject": "MATH", "number": "234", "name": "Calculus--Functions of Several Variables", "credits": 4, "cross_listed_as": [], "prerequisites": [["MATH_222"]], "offered": ["fall", "spring"], "is_upper_level": false},
-    {"id": "MATH_320", "subject": "MATH", "number": "320", "name": "Linear Algebra and Differential Equations", "credits": 3, "cross_listed_as": [], "prerequisites": [["MATH_222"]], "offered": ["fall", "spring"], "is_upper_level": true},
-    {"id": "MATH_340", "subject": "MATH", "number": "340", "name": "Elementary Matrix and Linear Algebra", "credits": 3, "cross_listed_as": [], "prerequisites": [["MATH_222"]], "offered": ["fall", "spring"], "is_upper_level": false},
-    {"id": "MATH_341", "subject": "MATH", "number": "341", "name": "Linear Algebra", "credits": 3, "cross_listed_as": [], "prerequisites": [["MATH_222"]], "offered": ["fall"], "is_upper_level": false},
-    {"id": "MATH_345", "subject": "MATH", "number": "345", "name": "Linear Algebra and Optimization", "credits": 3, "cross_listed_as": [], "prerequisites": [["MATH_222"]], "offered": ["spring"], "is_upper_level": true},
-    {"id": "MATH_375", "subject": "MATH", "number": "375", "name": "Topics in Multi-Variable Calculus and Linear Algebra", "credits": 5, "cross_listed_as": [], "prerequisites": [["MATH_222"]], "offered": ["fall", "spring"], "is_upper_level": false},
-    {"id": "MATH_319", "subject": "MATH", "number": "319", "name": "Techniques in Ordinary Differential Equations", "credits": 3, "cross_listed_as": [], "prerequisites": [["MATH_222"]], "offered": ["fall", "spring"], "is_upper_level": false},
-    {"id": "MATH_331", "subject": "MATH", "number": "331", "name": "Introductory Probability", "credits": 3, "cross_listed_as": [], "prerequisites": [["MATH_234"]], "offered": ["fall", "spring"], "is_upper_level": true},
-    {"id": "MATH_COMPSCI_240", "subject": "MATH", "number": "240", "name": "Introduction to Discrete Mathematics", "credits": 3, "cross_listed_as": ["COMP_SCI_240"], "prerequisites": [["MATH_221", "MATH_217"]], "offered": ["fall", "spring"], "is_upper_level": false},
-
-    {"id": "COMP_SCI_220", "subject": "COMP SCI", "number": "220", "name": "Data Science Programming I", "credits": 4, "cross_listed_as": [], "prerequisites": [], "offered": ["fall", "spring"], "is_upper_level": false},
-    {"id": "COMP_SCI_300", "subject": "COMP SCI", "number": "300", "name": "Programming II", "credits": 3, "cross_listed_as": [], "prerequisites": [], "offered": ["fall", "spring"], "is_upper_level": false},
-    {"id": "COMP_SCI_320", "subject": "COMP SCI", "number": "320", "name": "Data Science Programming II", "credits": 4, "cross_listed_as": [], "prerequisites": [["COMP_SCI_220"]], "offered": ["fall", "spring"], "is_upper_level": false},
-    {"id": "COMP_SCI_400", "subject": "COMP SCI", "number": "400", "name": "Programming III", "credits": 3, "cross_listed_as": [], "prerequisites": [["COMP_SCI_300", "COMP_SCI_220"]], "offered": ["fall", "spring"], "is_upper_level": true},
-    {"id": "COMP_SCI_412", "subject": "COMP SCI", "number": "412", "name": "Introduction to Numerical Methods", "credits": 3, "cross_listed_as": [], "prerequisites": [["MATH_222"], ["COMP_SCI_220", "COMP_SCI_300"]], "offered": ["fall", "spring"], "is_upper_level": true},
-    {"id": "COMP_SCI_540", "subject": "COMP SCI", "number": "540", "name": "Introduction to Artificial Intelligence", "credits": 3, "cross_listed_as": [], "prerequisites": [["COMP_SCI_300", "COMP_SCI_320"]], "offered": ["fall", "spring"], "is_upper_level": true},
-    {"id": "COMP_SCI_544", "subject": "COMP SCI", "number": "544", "name": "Introduction to Big Data Systems", "credits": 3, "cross_listed_as": [], "prerequisites": [["COMP_SCI_400"]], "offered": ["fall", "spring"], "is_upper_level": true},
-    {"id": "COMP_SCI_564", "subject": "COMP SCI", "number": "564", "name": "Database Management Systems: Design and Implementation", "credits": 3, "cross_listed_as": [], "prerequisites": [["COMP_SCI_400"]], "offered": ["fall", "spring"], "is_upper_level": true},
-    {"id": "COMP_SCI_565", "subject": "COMP SCI", "number": "565", "name": "Introduction to Data Visualization", "credits": 3, "cross_listed_as": [], "prerequisites": [["COMP_SCI_400"]], "offered": ["spring"], "is_upper_level": true},
-    {"id": "COMP_SCI_577", "subject": "COMP SCI", "number": "577", "name": "Introduction to Algorithms", "credits": 4, "cross_listed_as": [], "prerequisites": [["COMP_SCI_400"], ["MATH_COMPSCI_240"]], "offered": ["fall", "spring"], "is_upper_level": true},
-    {"id": "COMP_SCI_ECE_ISYE_524", "subject": "COMP SCI", "number": "524", "name": "Introduction to Optimization", "credits": 3, "cross_listed_as": ["ECE_ISYE_524", "ISYE_COMPSCI_ECE_524"], "prerequisites": [["MATH_340", "MATH_341", "MATH_375"]], "offered": ["fall", "spring"], "is_upper_level": true},
-    {"id": "COMP_SCI_ISYE_MATH_425", "subject": "COMP SCI", "number": "425", "name": "Introduction to Combinatorial Optimization", "credits": 3, "cross_listed_as": ["ISYE_COMPSCI_MATH_425"], "prerequisites": [["MATH_340", "MATH_341"]], "offered": ["fall"], "is_upper_level": true},
-    {"id": "COMP_SCI_ISYE_MATH_STAT_525", "subject": "COMP SCI", "number": "525", "name": "Linear Optimization", "credits": 3, "cross_listed_as": ["ISYE_COMPSCI_MATH_STAT_525"], "prerequisites": [["MATH_340", "MATH_341"]], "offered": ["spring"], "is_upper_level": true},
-
-    {"id": "STAT_240", "subject": "STAT", "number": "240", "name": "Data Science Modeling I", "credits": 4, "cross_listed_as": [], "prerequisites": [["COMP_SCI_220", "COMP_SCI_300"]], "offered": ["fall", "spring"], "is_upper_level": false},
-    {"id": "STAT_340", "subject": "STAT", "number": "340", "name": "Data Science Modeling II", "credits": 4, "cross_listed_as": [], "prerequisites": [["STAT_240"]], "offered": ["fall", "spring"], "is_upper_level": true},
-    {"id": "STAT_MATH_309", "subject": "STAT", "number": "309", "name": "Introduction to Probability and Mathematical Statistics I", "credits": 3, "cross_listed_as": ["MATH_STAT_309"], "prerequisites": [["MATH_222"]], "offered": ["fall", "spring"], "is_upper_level": true},
-    {"id": "STAT_311", "subject": "STAT", "number": "311", "name": "Introduction to Theory and Methods of Mathematical Statistics I", "credits": 3, "cross_listed_as": [], "prerequisites": [["MATH_222"]], "offered": ["fall", "spring"], "is_upper_level": true},
-    {"id": "STAT_MATH_310", "subject": "STAT", "number": "310", "name": "Introduction to Probability and Mathematical Statistics II", "credits": 3, "cross_listed_as": ["MATH_STAT_310"], "prerequisites": [["STAT_MATH_309"]], "offered": ["fall", "spring"], "is_upper_level": true},
-    {"id": "STAT_312", "subject": "STAT", "number": "312", "name": "Introduction to Theory and Methods of Mathematical Statistics II", "credits": 3, "cross_listed_as": [], "prerequisites": [["STAT_311"]], "offered": ["fall", "spring"], "is_upper_level": true},
-    {"id": "STAT_349", "subject": "STAT", "number": "349", "name": "Introduction to Time Series", "credits": 3, "cross_listed_as": [], "prerequisites": [["STAT_311", "STAT_MATH_309"]], "offered": ["spring"], "is_upper_level": true},
-    {"id": "STAT_451", "subject": "STAT", "number": "451", "name": "Introduction to Machine Learning and Statistical Pattern Classification", "credits": 3, "cross_listed_as": [], "prerequisites": [["STAT_340"], ["MATH_340", "MATH_341"]], "offered": ["fall", "spring"], "is_upper_level": true},
-    {"id": "STAT_453", "subject": "STAT", "number": "453", "name": "Introduction to Deep Learning and Generative Models", "credits": 3, "cross_listed_as": [], "prerequisites": [["STAT_451"]], "offered": ["spring"], "is_upper_level": true},
-    {"id": "MATH_STAT_431", "subject": "MATH", "number": "431", "name": "Introduction to the Theory of Probability", "credits": 3, "cross_listed_as": ["STAT_MATH_431"], "prerequisites": [["MATH_234"]], "offered": ["fall", "spring"], "is_upper_level": true},
-    {"id": "MATH_ISYE_OTM_STAT_632", "subject": "MATH", "number": "632", "name": "Introduction to Stochastic Processes", "credits": 3, "cross_listed_as": ["ISYE_MATH_OTM_STAT_632"], "prerequisites": [["STAT_311", "STAT_MATH_309", "MATH_STAT_431"]], "offered": ["fall", "spring"], "is_upper_level": true},
-
-    {"id": "ISYE_191", "subject": "I SY E", "number": "191", "name": "The Practice of Industrial Engineering", "credits": 2, "cross_listed_as": [], "prerequisites": [], "offered": ["fall"], "is_upper_level": false},
-    {"id": "ISYE_312", "subject": "I SY E", "number": "312", "name": "Data Management and Analysis for Industrial Engineers", "credits": 3, "cross_listed_as": [], "prerequisites": [["ISYE_191"], ["STAT_311", "STAT_MATH_309"]], "offered": ["spring"], "is_upper_level": true},
-    {"id": "ISYE_313", "subject": "I SY E", "number": "313", "name": "Engineering Economic Analysis", "credits": 3, "cross_listed_as": [], "prerequisites": [["MATH_222"]], "offered": ["fall", "spring"], "is_upper_level": true},
-    {"id": "ISYE_315", "subject": "I SY E", "number": "315", "name": "Production Planning and Control", "credits": 3, "cross_listed_as": [], "prerequisites": [["ISYE_323"]], "offered": ["spring"], "is_upper_level": true},
-    {"id": "ISYE_320", "subject": "I SY E", "number": "320", "name": "Simulation and Probabilistic Modeling", "credits": 3, "cross_listed_as": [], "prerequisites": [["STAT_311", "STAT_MATH_309"]], "offered": ["fall", "spring"], "is_upper_level": true},
-    {"id": "ISYE_321", "subject": "I SY E", "number": "321", "name": "Simulation Modeling Laboratory", "credits": 1, "cross_listed_as": [], "prerequisites": [["ISYE_320"]], "offered": ["fall", "spring"], "is_upper_level": true},
-    {"id": "ISYE_323", "subject": "I SY E", "number": "323", "name": "Operations Research-Deterministic Modeling", "credits": 3, "cross_listed_as": [], "prerequisites": [["MATH_234"], ["MATH_340", "MATH_341"]], "offered": ["fall", "spring"], "is_upper_level": true},
-    {"id": "ISYE_348", "subject": "I SY E", "number": "348", "name": "Introduction to Human Factors Engineering Laboratory", "credits": 1, "cross_listed_as": [], "prerequisites": [["ISYE_PSYCH_349"]], "offered": ["fall", "spring"], "is_upper_level": true},
-    {"id": "ISYE_PSYCH_349", "subject": "I SY E", "number": "349", "name": "Introduction to Human Factors", "credits": 3, "cross_listed_as": ["PSYCH_ISYE_349"], "prerequisites": [], "offered": ["fall", "spring"], "is_upper_level": true},
-    {"id": "ISYE_350", "subject": "I SY E", "number": "350", "name": "Industrial Engineering Design I", "credits": 3, "cross_listed_as": [], "prerequisites": [["ISYE_191"]], "offered": ["fall"], "is_upper_level": true},
-    {"id": "ISYE_450", "subject": "I SY E", "number": "450", "name": "Industrial Engineering Design II", "credits": 3, "cross_listed_as": [], "prerequisites": [["ISYE_350"]], "offered": ["spring"], "is_upper_level": true},
-    {"id": "ISYE_412", "subject": "I SY E", "number": "412", "name": "Fundamentals of Industrial Data Analytics", "credits": 3, "cross_listed_as": [], "prerequisites": [["ISYE_312"]], "offered": ["fall"], "is_upper_level": true},
-    {"id": "ISYE_521", "subject": "I SY E", "number": "521", "name": "Machine Learning in Action for Industrial Engineers", "credits": 3, "cross_listed_as": [], "prerequisites": [["STAT_311", "STAT_MATH_309"]], "offered": ["spring"], "is_upper_level": true},
-    {"id": "ISYE_562", "subject": "I SY E", "number": "562", "name": "Human Factors of Data Science and Machine Learning", "credits": 3, "cross_listed_as": [], "prerequisites": [], "offered": ["fall"], "is_upper_level": true},
-    {"id": "ECE_ISYE_570", "subject": "ECE", "number": "570", "name": "Ethics of Data for Engineers", "credits": 3, "cross_listed_as": ["ISYE_ECE_570"], "prerequisites": [], "offered": ["fall", "spring"], "is_upper_level": true},
-    {"id": "ISYE_603", "subject": "I SY E", "number": "603", "name": "Special Topics in Engineering Analytics and Operations Research", "credits": 3, "cross_listed_as": [], "prerequisites": [], "offered": ["fall", "spring"], "is_upper_level": true},
-    {"id": "ISYE_612", "subject": "I SY E", "number": "612", "name": "Information Sensing and Analysis for Manufacturing Processes", "credits": 3, "cross_listed_as": [], "prerequisites": [["ISYE_412"]], "offered": ["spring"], "is_upper_level": true},
-    {"id": "ISYE_649", "subject": "I SY E", "number": "649", "name": "Interactive Data Analytics", "credits": 3, "cross_listed_as": [], "prerequisites": [], "offered": ["spring"], "is_upper_level": true},
-    {"id": "ISYE_575", "subject": "I SY E", "number": "575", "name": "Introduction to Quality Engineering", "credits": 3, "cross_listed_as": [], "prerequisites": [["STAT_311", "STAT_MATH_309"]], "offered": ["fall"], "is_upper_level": true},
-    {"id": "ISYE_516", "subject": "I SY E", "number": "516", "name": "Introduction to Decision Analysis", "credits": 3, "cross_listed_as": [], "prerequisites": [], "offered": ["spring"], "is_upper_level": true},
-    {"id": "ISYE_620", "subject": "I SY E", "number": "620", "name": "Simulation Modeling and Analysis", "credits": 3, "cross_listed_as": [], "prerequisites": [["ISYE_320"]], "offered": ["fall"], "is_upper_level": true},
-    {"id": "ISYE_624", "subject": "I SY E", "number": "624", "name": "Stochastic Modeling Techniques", "credits": 3, "cross_listed_as": [], "prerequisites": [["STAT_311", "STAT_MATH_309"]], "offered": ["spring"], "is_upper_level": true},
-
-    {"id": "ECON_101", "subject": "ECON", "number": "101", "name": "Principles of Microeconomics", "credits": 4, "cross_listed_as": [], "prerequisites": [], "offered": ["fall", "spring"], "is_upper_level": false},
-    {"id": "ENGL_100", "subject": "ENGL", "number": "100", "name": "Introduction to College Composition", "credits": 3, "cross_listed_as": [], "prerequisites": [], "offered": ["fall", "spring"], "is_upper_level": false},
-    {"id": "COM_ARTS_100", "subject": "COM ARTS", "number": "100", "name": "Introduction to Speech Composition", "credits": 3, "cross_listed_as": [], "prerequisites": [], "offered": ["fall", "spring"], "is_upper_level": false},
-    {"id": "LSC_100", "subject": "LSC", "number": "100", "name": "Science and Storytelling", "credits": 3, "cross_listed_as": [], "prerequisites": [], "offered": ["fall", "spring"], "is_upper_level": false},
-    {"id": "INTEREGR_397", "subject": "INTEREGR", "number": "397", "name": "Engineering Communication", "credits": 3, "cross_listed_as": [], "prerequisites": [], "offered": ["fall", "spring"], "is_upper_level": true},
-    {"id": "LIS_461", "subject": "LIS", "number": "461", "name": "Data and Algorithms: Ethics and Policy", "credits": 3, "cross_listed_as": [], "prerequisites": [], "offered": ["fall", "spring"], "is_upper_level": true},
-    {"id": "PHILOS_244", "subject": "PHILOS", "number": "244", "name": "Introductory Artificial Intelligence (AI) and Data Ethics", "credits": 3, "cross_listed_as": [], "prerequisites": [], "offered": ["fall", "spring"], "is_upper_level": false},
-
-    {"id": "PHYSICS_201", "subject": "PHYSICS", "number": "201", "name": "General Physics", "credits": 5, "cross_listed_as": [], "prerequisites": [["MATH_221", "MATH_217"]], "offered": ["fall", "spring"], "is_upper_level": false},
-    {"id": "PHYSICS_207", "subject": "PHYSICS", "number": "207", "name": "General Physics", "credits": 5, "cross_listed_as": [], "prerequisites": [["MATH_221", "MATH_217"]], "offered": ["fall", "spring"], "is_upper_level": false},
-    {"id": "PHYSICS_202", "subject": "PHYSICS", "number": "202", "name": "General Physics", "credits": 4, "cross_listed_as": [], "prerequisites": [["PHYSICS_201", "PHYSICS_207"]], "offered": ["fall", "spring"], "is_upper_level": false},
-    {"id": "PHYSICS_208", "subject": "PHYSICS", "number": "208", "name": "General Physics", "credits": 4, "cross_listed_as": [], "prerequisites": [["PHYSICS_207", "PHYSICS_201"]], "offered": ["fall", "spring"], "is_upper_level": false},
-    {"id": "CHEM_103", "subject": "CHEM", "number": "103", "name": "General Chemistry I", "credits": 4, "cross_listed_as": [], "prerequisites": [], "offered": ["fall", "spring"], "is_upper_level": false},
-    {"id": "CHEM_109", "subject": "CHEM", "number": "109", "name": "Advanced General Chemistry", "credits": 5, "cross_listed_as": [], "prerequisites": [], "offered": ["fall", "spring"], "is_upper_level": false}
+    {
+      "id": "MATH_217",
+      "subject": "MATH",
+      "number": "217",
+      "name": "Calculus with Algebra and Trigonometry II",
+      "credits": 5,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": false
+    },
+    {
+      "id": "MATH_221",
+      "subject": "MATH",
+      "number": "221",
+      "name": "Calculus and Analytic Geometry 1",
+      "credits": 5,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring",
+        "summer"
+      ],
+      "is_upper_level": false
+    },
+    {
+      "id": "MATH_222",
+      "subject": "MATH",
+      "number": "222",
+      "name": "Calculus and Analytic Geometry 2",
+      "credits": 4,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "MATH_221",
+          "MATH_217"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring",
+        "summer"
+      ],
+      "is_upper_level": false
+    },
+    {
+      "id": "MATH_234",
+      "subject": "MATH",
+      "number": "234",
+      "name": "Calculus--Functions of Several Variables",
+      "credits": 4,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "MATH_222"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": false
+    },
+    {
+      "id": "MATH_320",
+      "subject": "MATH",
+      "number": "320",
+      "name": "Linear Algebra and Differential Equations",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "MATH_222"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "MATH_340",
+      "subject": "MATH",
+      "number": "340",
+      "name": "Elementary Matrix and Linear Algebra",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "MATH_222"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": false
+    },
+    {
+      "id": "MATH_341",
+      "subject": "MATH",
+      "number": "341",
+      "name": "Linear Algebra",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "MATH_222"
+        ]
+      ],
+      "offered": [
+        "fall"
+      ],
+      "is_upper_level": false
+    },
+    {
+      "id": "MATH_345",
+      "subject": "MATH",
+      "number": "345",
+      "name": "Linear Algebra and Optimization",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "MATH_222"
+        ]
+      ],
+      "offered": [
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "MATH_375",
+      "subject": "MATH",
+      "number": "375",
+      "name": "Topics in Multi-Variable Calculus and Linear Algebra",
+      "credits": 5,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "MATH_222"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": false
+    },
+    {
+      "id": "MATH_319",
+      "subject": "MATH",
+      "number": "319",
+      "name": "Techniques in Ordinary Differential Equations",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "MATH_222"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": false
+    },
+    {
+      "id": "MATH_331",
+      "subject": "MATH",
+      "number": "331",
+      "name": "Introductory Probability",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "MATH_234"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "MATH_COMPSCI_240",
+      "subject": "MATH",
+      "number": "240",
+      "name": "Introduction to Discrete Mathematics",
+      "credits": 3,
+      "cross_listed_as": [
+        "COMP_SCI_240"
+      ],
+      "prerequisites": [
+        [
+          "MATH_221",
+          "MATH_217"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": false
+    },
+    {
+      "id": "COMP_SCI_220",
+      "subject": "COMP SCI",
+      "number": "220",
+      "name": "Data Science Programming I",
+      "credits": 4,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": false
+    },
+    {
+      "id": "COMP_SCI_300",
+      "subject": "COMP SCI",
+      "number": "300",
+      "name": "Programming II",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": false
+    },
+    {
+      "id": "COMP_SCI_320",
+      "subject": "COMP SCI",
+      "number": "320",
+      "name": "Data Science Programming II",
+      "credits": 4,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "COMP_SCI_220"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": false
+    },
+    {
+      "id": "COMP_SCI_400",
+      "subject": "COMP SCI",
+      "number": "400",
+      "name": "Programming III",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "COMP_SCI_300",
+          "COMP_SCI_220"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "COMP_SCI_412",
+      "subject": "COMP SCI",
+      "number": "412",
+      "name": "Introduction to Numerical Methods",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "MATH_222"
+        ],
+        [
+          "COMP_SCI_220",
+          "COMP_SCI_300"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "COMP_SCI_540",
+      "subject": "COMP SCI",
+      "number": "540",
+      "name": "Introduction to Artificial Intelligence",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "COMP_SCI_300",
+          "COMP_SCI_320"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "COMP_SCI_544",
+      "subject": "COMP SCI",
+      "number": "544",
+      "name": "Introduction to Big Data Systems",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "COMP_SCI_400"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "COMP_SCI_564",
+      "subject": "COMP SCI",
+      "number": "564",
+      "name": "Database Management Systems: Design and Implementation",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "COMP_SCI_400"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "COMP_SCI_565",
+      "subject": "COMP SCI",
+      "number": "565",
+      "name": "Introduction to Data Visualization",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "COMP_SCI_400"
+        ]
+      ],
+      "offered": [
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "COMP_SCI_577",
+      "subject": "COMP SCI",
+      "number": "577",
+      "name": "Introduction to Algorithms",
+      "credits": 4,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "COMP_SCI_400"
+        ],
+        [
+          "MATH_COMPSCI_240"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "COMP_SCI_ECE_ISYE_524",
+      "subject": "COMP SCI",
+      "number": "524",
+      "name": "Introduction to Optimization",
+      "credits": 3,
+      "cross_listed_as": [
+        "ECE_ISYE_524",
+        "ISYE_COMPSCI_ECE_524",
+        "ISYE_524"
+      ],
+      "prerequisites": [
+        [
+          "MATH_340",
+          "MATH_341",
+          "MATH_375"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "COMP_SCI_ISYE_MATH_425",
+      "subject": "COMP SCI",
+      "number": "425",
+      "name": "Introduction to Combinatorial Optimization",
+      "credits": 3,
+      "cross_listed_as": [
+        "ISYE_COMPSCI_MATH_425"
+      ],
+      "prerequisites": [
+        [
+          "MATH_340",
+          "MATH_341"
+        ]
+      ],
+      "offered": [
+        "fall"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "COMP_SCI_ISYE_MATH_STAT_525",
+      "subject": "COMP SCI",
+      "number": "525",
+      "name": "Linear Optimization",
+      "credits": 3,
+      "cross_listed_as": [
+        "ISYE_COMPSCI_MATH_STAT_525"
+      ],
+      "prerequisites": [
+        [
+          "MATH_340",
+          "MATH_341"
+        ]
+      ],
+      "offered": [
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "STAT_240",
+      "subject": "STAT",
+      "number": "240",
+      "name": "Data Science Modeling I",
+      "credits": 4,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "COMP_SCI_220",
+          "COMP_SCI_300"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": false
+    },
+    {
+      "id": "STAT_340",
+      "subject": "STAT",
+      "number": "340",
+      "name": "Data Science Modeling II",
+      "credits": 4,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "STAT_240"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "STAT_MATH_309",
+      "subject": "STAT",
+      "number": "309",
+      "name": "Introduction to Probability and Mathematical Statistics I",
+      "credits": 3,
+      "cross_listed_as": [
+        "MATH_STAT_309"
+      ],
+      "prerequisites": [
+        [
+          "MATH_222"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "STAT_311",
+      "subject": "STAT",
+      "number": "311",
+      "name": "Introduction to Theory and Methods of Mathematical Statistics I",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "MATH_222"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "STAT_MATH_310",
+      "subject": "STAT",
+      "number": "310",
+      "name": "Introduction to Probability and Mathematical Statistics II",
+      "credits": 3,
+      "cross_listed_as": [
+        "MATH_STAT_310"
+      ],
+      "prerequisites": [
+        [
+          "STAT_MATH_309"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "STAT_312",
+      "subject": "STAT",
+      "number": "312",
+      "name": "Introduction to Theory and Methods of Mathematical Statistics II",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "STAT_311",
+          "STAT_MATH_309"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "STAT_349",
+      "subject": "STAT",
+      "number": "349",
+      "name": "Introduction to Time Series",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "STAT_311",
+          "STAT_MATH_309"
+        ]
+      ],
+      "offered": [
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "STAT_451",
+      "subject": "STAT",
+      "number": "451",
+      "name": "Introduction to Machine Learning and Statistical Pattern Classification",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "STAT_340"
+        ],
+        [
+          "MATH_340",
+          "MATH_341"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "STAT_453",
+      "subject": "STAT",
+      "number": "453",
+      "name": "Introduction to Deep Learning and Generative Models",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "STAT_451"
+        ]
+      ],
+      "offered": [
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "MATH_STAT_431",
+      "subject": "MATH",
+      "number": "431",
+      "name": "Introduction to the Theory of Probability",
+      "credits": 3,
+      "cross_listed_as": [
+        "STAT_MATH_431"
+      ],
+      "prerequisites": [
+        [
+          "MATH_234"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "MATH_ISYE_OTM_STAT_632",
+      "subject": "MATH",
+      "number": "632",
+      "name": "Introduction to Stochastic Processes",
+      "credits": 3,
+      "cross_listed_as": [
+        "ISYE_MATH_OTM_STAT_632"
+      ],
+      "prerequisites": [
+        [
+          "STAT_311",
+          "STAT_MATH_309",
+          "MATH_STAT_431"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "ISYE_191",
+      "subject": "I SY E",
+      "number": "191",
+      "name": "The Practice of Industrial Engineering",
+      "credits": 2,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall"
+      ],
+      "is_upper_level": false
+    },
+    {
+      "id": "ISYE_312",
+      "subject": "I SY E",
+      "number": "312",
+      "name": "Data Management and Analysis for Industrial Engineers",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "ISYE_191"
+        ],
+        [
+          "STAT_311",
+          "STAT_MATH_309"
+        ]
+      ],
+      "offered": [
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "ISYE_313",
+      "subject": "I SY E",
+      "number": "313",
+      "name": "Engineering Economic Analysis",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "MATH_222"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "ISYE_315",
+      "subject": "I SY E",
+      "number": "315",
+      "name": "Production Planning and Control",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "ISYE_323"
+        ]
+      ],
+      "offered": [
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "ISYE_320",
+      "subject": "I SY E",
+      "number": "320",
+      "name": "Simulation and Probabilistic Modeling",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "STAT_311",
+          "STAT_MATH_309"
+        ]
+      ],
+      "co_requisites": [
+        "ISYE_321"
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "ISYE_321",
+      "subject": "I SY E",
+      "number": "321",
+      "name": "Simulation Modeling Laboratory",
+      "credits": 1,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "STAT_311",
+          "STAT_MATH_309"
+        ]
+      ],
+      "co_requisites": [
+        "ISYE_320"
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "ISYE_323",
+      "subject": "I SY E",
+      "number": "323",
+      "name": "Operations Research-Deterministic Modeling",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "MATH_234"
+        ],
+        [
+          "MATH_340",
+          "MATH_341"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "ISYE_348",
+      "subject": "I SY E",
+      "number": "348",
+      "name": "Introduction to Human Factors Engineering Laboratory",
+      "credits": 1,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true,
+      "co_requisites": [
+        "ISYE_PSYCH_349"
+      ],
+      "concurrent_prereqs": []
+    },
+    {
+      "id": "ISYE_PSYCH_349",
+      "subject": "I SY E",
+      "number": "349",
+      "name": "Introduction to Human Factors",
+      "credits": 3,
+      "cross_listed_as": [
+        "PSYCH_ISYE_349"
+      ],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true,
+      "co_requisites": [
+        "ISYE_348"
+      ],
+      "concurrent_prereqs": []
+    },
+    {
+      "id": "ISYE_350",
+      "subject": "I SY E",
+      "number": "350",
+      "name": "Industrial Engineering Design I",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "ISYE_191"
+        ]
+      ],
+      "offered": [
+        "fall"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "ISYE_450",
+      "subject": "I SY E",
+      "number": "450",
+      "name": "Industrial Engineering Design II",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "ISYE_350"
+        ]
+      ],
+      "offered": [
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "ISYE_412",
+      "subject": "I SY E",
+      "number": "412",
+      "name": "Fundamentals of Industrial Data Analytics",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "ISYE_312"
+        ]
+      ],
+      "offered": [
+        "fall"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "ISYE_521",
+      "subject": "I SY E",
+      "number": "521",
+      "name": "Machine Learning in Action for Industrial Engineers",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "STAT_311",
+          "STAT_MATH_309"
+        ]
+      ],
+      "offered": [
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "ISYE_562",
+      "subject": "I SY E",
+      "number": "562",
+      "name": "Human Factors of Data Science and Machine Learning",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "ECE_ISYE_570",
+      "subject": "ECE",
+      "number": "570",
+      "name": "Ethics of Data for Engineers",
+      "credits": 3,
+      "cross_listed_as": [
+        "ISYE_ECE_570"
+      ],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "ISYE_603",
+      "subject": "I SY E",
+      "number": "603",
+      "name": "Special Topics in Engineering Analytics and Operations Research",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "ISYE_612",
+      "subject": "I SY E",
+      "number": "612",
+      "name": "Information Sensing and Analysis for Manufacturing Processes",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "ISYE_412"
+        ]
+      ],
+      "offered": [
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "ISYE_649",
+      "subject": "I SY E",
+      "number": "649",
+      "name": "Interactive Data Analytics",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "ISYE_575",
+      "subject": "I SY E",
+      "number": "575",
+      "name": "Introduction to Quality Engineering",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "STAT_311",
+          "STAT_MATH_309"
+        ]
+      ],
+      "offered": [
+        "fall"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "ISYE_516",
+      "subject": "I SY E",
+      "number": "516",
+      "name": "Introduction to Decision Analysis",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "ISYE_620",
+      "subject": "I SY E",
+      "number": "620",
+      "name": "Simulation Modeling and Analysis",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "ISYE_320"
+        ]
+      ],
+      "offered": [
+        "fall"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "ISYE_624",
+      "subject": "I SY E",
+      "number": "624",
+      "name": "Stochastic Modeling Techniques",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "STAT_311",
+          "STAT_MATH_309"
+        ]
+      ],
+      "offered": [
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "ECON_101",
+      "subject": "ECON",
+      "number": "101",
+      "name": "Principles of Microeconomics",
+      "credits": 4,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": false
+    },
+    {
+      "id": "ENGL_100",
+      "subject": "ENGL",
+      "number": "100",
+      "name": "Introduction to College Composition",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": false
+    },
+    {
+      "id": "COM_ARTS_262",
+      "subject": "COM ARTS",
+      "number": "262",
+      "name": "Argumentation and Debate",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": false,
+      "notes": "Satisfies Communication Part B (Gen Ed)."
+    },
+    {
+      "id": "COM_ARTS_266",
+      "subject": "COM ARTS",
+      "number": "266",
+      "name": "Theory and Practice of Group Discussion",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": false,
+      "notes": "Satisfies Communication Part B (Gen Ed)."
+    },
+    {
+      "id": "COM_ARTS_272",
+      "subject": "COM ARTS",
+      "number": "272",
+      "name": "Introduction to Interpersonal Communication",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": false,
+      "notes": "Satisfies Communication Part B (Gen Ed)."
+    },
+    {
+      "id": "COM_ARTS_100",
+      "subject": "COM ARTS",
+      "number": "100",
+      "name": "Introduction to Speech Composition",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": false
+    },
+    {
+      "id": "LSC_100",
+      "subject": "LSC",
+      "number": "100",
+      "name": "Science and Storytelling",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": false
+    },
+    {
+      "id": "INTEREGR_397",
+      "subject": "INTEREGR",
+      "number": "397",
+      "name": "Engineering Communication",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "LIS_461",
+      "subject": "LIS",
+      "number": "461",
+      "name": "Data and Algorithms: Ethics and Policy",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "PHILOS_244",
+      "subject": "PHILOS",
+      "number": "244",
+      "name": "Introductory Artificial Intelligence (AI) and Data Ethics",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": false
+    },
+    {
+      "id": "PHYSICS_201",
+      "subject": "PHYSICS",
+      "number": "201",
+      "name": "General Physics",
+      "credits": 5,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "MATH_221",
+          "MATH_217"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": false
+    },
+    {
+      "id": "PHYSICS_207",
+      "subject": "PHYSICS",
+      "number": "207",
+      "name": "General Physics",
+      "credits": 5,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "MATH_221",
+          "MATH_217"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": false
+    },
+    {
+      "id": "PHYSICS_202",
+      "subject": "PHYSICS",
+      "number": "202",
+      "name": "General Physics",
+      "credits": 4,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "PHYSICS_201",
+          "PHYSICS_207"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": false
+    },
+    {
+      "id": "PHYSICS_208",
+      "subject": "PHYSICS",
+      "number": "208",
+      "name": "General Physics",
+      "credits": 4,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "PHYSICS_207",
+          "PHYSICS_201"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": false
+    },
+    {
+      "id": "CHEM_103",
+      "subject": "CHEM",
+      "number": "103",
+      "name": "General Chemistry I",
+      "credits": 4,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": false
+    },
+    {
+      "id": "CHEM_109",
+      "subject": "CHEM",
+      "number": "109",
+      "name": "Advanced General Chemistry",
+      "credits": 5,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": false
+    },
+    {
+      "id": "ISYE_210",
+      "subject": "I SY E",
+      "number": "210",
+      "name": "Introduction to Industrial Statistics",
+      "credits": 3,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ISYE_373",
+      "subject": "I SY E",
+      "number": "373",
+      "name": "Data Analytics for Industrial Engineering",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ISYE_415",
+      "subject": "I SY E",
+      "number": "415",
+      "name": "Introduction to Manufacturing Systems Design",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ISYE_445",
+      "subject": "I SY E",
+      "number": "445",
+      "name": "Engineering Supply Chain Management",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ISYE_ME_510",
+      "subject": "I SY E",
+      "number": "510",
+      "name": "Facilities Planning",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [
+        "ME_ISYE_510"
+      ],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ISYE_ME_512",
+      "subject": "I SY E",
+      "number": "512",
+      "name": "Inspection, Quality Control and Reliability",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [
+        "ME_ISYE_512"
+      ],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ISYE_515",
+      "subject": "I SY E",
+      "number": "515",
+      "name": "Engineering Management of Continuous Process",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ISYE_604",
+      "subject": "I SY E",
+      "number": "604",
+      "name": "Special Topics in Manufacturing and Supply Chain",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ISYE_605",
+      "subject": "I SY E",
+      "number": "605",
+      "name": "Computer Integrated Manufacturing",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ISYE_ME_641",
+      "subject": "I SY E",
+      "number": "641",
+      "name": "Design and Analysis of Manufacturing Systems",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [
+        "ME_ISYE_641"
+      ],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ISYE_645",
+      "subject": "I SY E",
+      "number": "645",
+      "name": "Engineering Models for Supply Chains",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ISYE_417",
+      "subject": "I SY E",
+      "number": "417",
+      "name": "Health Systems Engineering",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ISYE_517",
+      "subject": "I SY E",
+      "number": "517",
+      "name": "Decision Making in Health Care",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ISYE_606",
+      "subject": "I SY E",
+      "number": "606",
+      "name": "Special Topics in Healthcare Systems Engineering",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ISYE_520",
+      "subject": "I SY E",
+      "number": "520",
+      "name": "Quality Assurance Systems",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "COMP_SCI_DS_ISYE_518",
+      "subject": "COMP SCI",
+      "number": "518",
+      "name": "Wearable Technology",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [
+        "DS_COMP_SCI_ISYE_518",
+        "ISYE_COMPSCI_DS_518"
+      ],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ISYE_PSYCH_549",
+      "subject": "I SY E",
+      "number": "549",
+      "name": "Human Factors Engineering",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [
+        "PSYCH_ISYE_549"
+      ],
+      "prerequisites": [
+        [
+          "ISYE_PSYCH_349"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ISYE_552",
+      "subject": "I SY E",
+      "number": "552",
+      "name": "Human Factors Engineering Design and Evaluation",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "ISYE_PSYCH_349"
+        ]
+      ],
+      "offered": [
+        "fall"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ISYE_555",
+      "subject": "I SY E",
+      "number": "555",
+      "name": "Human Performance and Accident Causation",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "ISYE_PSYCH_349"
+        ]
+      ],
+      "offered": [
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ISYE_557",
+      "subject": "I SY E",
+      "number": "557",
+      "name": "Human Factors Engineering for Healthcare Systems",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "BME_ISYE_564",
+      "subject": "BME",
+      "number": "564",
+      "name": "Occupational Ergonomics and Biomechanics",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [
+        "ISYE_BME_564"
+      ],
+      "prerequisites": [
+        [
+          "ISYE_PSYCH_349"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ISYE_602",
+      "subject": "I SY E",
+      "number": "602",
+      "name": "Special Topics in Human Factors",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "BME_ISYE_662",
+      "subject": "BME",
+      "number": "662",
+      "name": "Design for Human Disability and Aging",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [
+        "ISYE_BME_662"
+      ],
+      "prerequisites": [],
+      "offered": [
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ISYE_623",
+      "subject": "I SY E",
+      "number": "623",
+      "name": "Advanced Optimization Modeling",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "ISYE_323",
+          "COMP_SCI_ISYE_MATH_425",
+          "COMP_SCI_ISYE_MATH_STAT_525"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ENGL_X04",
+      "subject": "ENGL",
+      "number": "X04",
+      "name": "AP English Language Credit â€” Engineering Communication 1",
+      "credits": 3,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [],
+      "notes": "AP credit placeholder. Satisfies Engineering Communication 1 / Comm A."
+    },
+    {
+      "id": "ZOOLOGY_151",
+      "subject": "ZOOLOGY",
+      "number": "151",
+      "name": "Introductory Biology",
+      "credits": 5,
+      "is_upper_level": false,
+      "cross_listed_as": [
+        "BIOLOGY_151"
+      ],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ANAT_PHY_335",
+      "subject": "ANAT PHY",
+      "number": "335",
+      "name": "Physiology",
+      "credits": 5,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "BIOLOGY_152",
+      "subject": "BIOLOGY",
+      "number": "152",
+      "name": "Introductory Biology",
+      "credits": 5,
+      "is_upper_level": false,
+      "cross_listed_as": [
+        "BOTANY_152",
+        "ZOOLOGY_152"
+      ],
+      "prerequisites": [
+        [
+          "BIOLOGY_151",
+          "ZOOLOGY_151"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Introductory Biology II (evolution, ecology)."
+    },
+    {
+      "id": "CHEM_104",
+      "subject": "CHEM",
+      "number": "104",
+      "name": "General Chemistry II",
+      "credits": 5,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "CHEM_103"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "CHEM_115",
+      "subject": "CHEM",
+      "number": "115",
+      "name": "Chemical Principles I",
+      "credits": 5,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Accelerated general chemistry sequence."
+    },
+    {
+      "id": "CHEM_116",
+      "subject": "CHEM",
+      "number": "116",
+      "name": "Chemical Principles II",
+      "credits": 5,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "CHEM_115"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "CHEM_311",
+      "subject": "CHEM",
+      "number": "311",
+      "name": "Chemistry Across the Periodic Table",
+      "credits": 4,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "CHEM_104",
+          "CHEM_116"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "CHEM_327",
+      "subject": "CHEM",
+      "number": "327",
+      "name": "Fundamentals of Analytical Science I",
+      "credits": 4,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "CHEM_104",
+          "CHEM_116"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "CHEM_329",
+      "subject": "CHEM",
+      "number": "329",
+      "name": "Fundamentals of Analytical Science II",
+      "credits": 4,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "CHEM_327"
+        ]
+      ],
+      "offered": [
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "CHEM_341",
+      "subject": "CHEM",
+      "number": "341",
+      "name": "Elementary Organic Chemistry",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "CHEM_104",
+          "CHEM_116"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "CHEM_342",
+      "subject": "CHEM",
+      "number": "342",
+      "name": "Elementary Organic Chemistry Laboratory",
+      "credits": 1,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Lab companion to CHEM 341."
+    },
+    {
+      "id": "CHEM_343",
+      "subject": "CHEM",
+      "number": "343",
+      "name": "Organic Chemistry I",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "CHEM_104",
+          "CHEM_116"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "CHEM_344",
+      "subject": "CHEM",
+      "number": "344",
+      "name": "Introductory Organic Chemistry Laboratory",
+      "credits": 2,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Lab companion to CHEM 343."
+    },
+    {
+      "id": "CHEM_345",
+      "subject": "CHEM",
+      "number": "345",
+      "name": "Organic Chemistry II",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "CHEM_343"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "CHEM_346",
+      "subject": "CHEM",
+      "number": "346",
+      "name": "Intermediate Organic Chemistry Laboratory",
+      "credits": 2,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "CHEM_344"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Lab companion to CHEM 345. 1-2 credits."
+    },
+    {
+      "id": "COMP_SCI_200",
+      "subject": "COMP SCI",
+      "number": "200",
+      "name": "Programming I",
+      "credits": 3,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "EMA_201",
+      "subject": "E M A",
+      "number": "201",
+      "name": "Statics",
+      "credits": 3,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "PHYSICS_201",
+          "PHYSICS_207"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "EMA_202",
+      "subject": "E M A",
+      "number": "202",
+      "name": "Dynamics",
+      "credits": 3,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "EMA_201"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "EMA_201_202_SEQ",
+      "subject": "E M A",
+      "number": "201+202",
+      "name": "Statics and Dynamics Sequence",
+      "credits": 6,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Virtual ID representing completion of both EMA 201 and EMA 202. Use this ID if you completed both Statics and Dynamics."
+    },
+    {
+      "id": "ESL_118",
+      "subject": "ESL",
+      "number": "118",
+      "name": "Academic Writing II",
+      "credits": 3,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Satisfies Communication Part A (Comm A) for international students."
+    },
+    {
+      "id": "ISYE_468",
+      "subject": "I SY E",
+      "number": "468",
+      "name": "Introduction to Industrial Engineering Research",
+      "credits": 1,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ISYE_478",
+      "subject": "I SY E",
+      "number": "478",
+      "name": "Research and Beyond in Industrial Engineering",
+      "credits": 1,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ISYE_489",
+      "subject": "I SY E",
+      "number": "489",
+      "name": "Honors in Research",
+      "credits": 2,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "1-3 variable credits; 2 used as default."
+    },
+    {
+      "id": "MATH_421",
+      "subject": "MATH",
+      "number": "421",
+      "name": "The Theory of Single Variable Calculus",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "MATH_234"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "MATH_443",
+      "subject": "MATH",
+      "number": "443",
+      "name": "Applied Linear Algebra",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "MATH_340"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "MATH_521",
+      "subject": "MATH",
+      "number": "521",
+      "name": "Analysis I",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "MATH_234"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "MATH_522",
+      "subject": "MATH",
+      "number": "522",
+      "name": "Analysis II",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "MATH_521"
+        ]
+      ],
+      "offered": [
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "MATH_COMPSCI_STAT_475",
+      "subject": "MATH",
+      "number": "475",
+      "name": "Introduction to Combinatorics",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [
+        "COMP_SCI_MATH_STAT_475",
+        "STAT_COMP_SCI_MATH_475"
+      ],
+      "prerequisites": [
+        [
+          "MATH_234"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "MICROBIO_101",
+      "subject": "MICROBIO",
+      "number": "101",
+      "name": "General Microbiology",
+      "credits": 3,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "MICROBIO_102",
+      "subject": "MICROBIO",
+      "number": "102",
+      "name": "General Microbiology Laboratory",
+      "credits": 2,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "MICROBIO_101"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "PHYSICS_205",
+      "subject": "PHYSICS",
+      "number": "205",
+      "name": "Modern Physics for Engineers",
+      "credits": 3,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "PHYSICS_202",
+          "PHYSICS_208"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "PHYSICS_241",
+      "subject": "PHYSICS",
+      "number": "241",
+      "name": "Introduction to Modern Physics",
+      "credits": 3,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "PHYSICS_202",
+          "PHYSICS_208"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": null
+    },
+    {
+      "id": "PHYSICS_248",
+      "subject": "PHYSICS",
+      "number": "248",
+      "name": "A Modern Introduction to Physics",
+      "credits": 5,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Continuation of PHYSICS 247; electromagnetism, optics, modern physics with computation."
+    },
+    {
+      "id": "PHYSICS_249",
+      "subject": "PHYSICS",
+      "number": "249",
+      "name": "A Modern Introduction to Physics",
+      "credits": 4,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "PHYSICS_248"
+        ]
+      ],
+      "offered": [
+        "spring"
+      ],
+      "notes": "Continuation of PHYSICS 248; quantum mechanics, nuclear and particle physics."
+    },
+    {
+      "id": "COMP_SCI_MATH_513",
+      "subject": "COMP SCI",
+      "number": "513",
+      "name": "Numerical Linear Algebra",
+      "credits": 3,
+      "cross_listed_as": [
+        "MATH_COMP_SCI_513"
+      ],
+      "prerequisites": [
+        [
+          "MATH_340",
+          "MATH_341",
+          "MATH_320"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "COMP_SCI_MATH_514",
+      "subject": "COMP SCI",
+      "number": "514",
+      "name": "Numerical Analysis",
+      "credits": 3,
+      "cross_listed_as": [
+        "MATH_COMP_SCI_514"
+      ],
+      "prerequisites": [
+        [
+          "MATH_234"
+        ],
+        [
+          "COMP_SCI_300",
+          "COMP_SCI_220"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "COMP_SCI_557",
+      "subject": "COMP SCI",
+      "number": "557",
+      "name": "Introduction to Computer Vision",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "COMP_SCI_300",
+          "COMP_SCI_220"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "COMP_SCI_BMI_576",
+      "subject": "COMP SCI",
+      "number": "576",
+      "name": "Bioinformatics",
+      "credits": 3,
+      "cross_listed_as": [
+        "BMI_COMP_SCI_576"
+      ],
+      "prerequisites": [
+        [
+          "COMP_SCI_300",
+          "COMP_SCI_220"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "GEOG_573",
+      "subject": "GEOG",
+      "number": "573",
+      "name": "GIS Foundations",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "GEOG_574",
+      "subject": "GEOG",
+      "number": "574",
+      "name": "Advanced GIS",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "GEOG_573"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "MATH_444",
+      "subject": "MATH",
+      "number": "444",
+      "name": "Introduction to Complex Variables",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "MATH_234"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "STAT_COMP_SCI_471",
+      "subject": "STAT",
+      "number": "471",
+      "name": "Introduction to Computational Statistics",
+      "credits": 3,
+      "cross_listed_as": [
+        "COMP_SCI_STAT_471"
+      ],
+      "prerequisites": [
+        [
+          "STAT_240"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "ACT_SCI_657",
+      "subject": "ACT SCI",
+      "number": "657",
+      "name": "Loss Models",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "CIV_ENGR_516",
+      "subject": "CIV ENGR",
+      "number": "516",
+      "name": "Introduction to Traffic Engineering",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "ECON_400",
+      "subject": "ECON",
+      "number": "400",
+      "name": "Introduction to Econometrics",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "ECON_410",
+      "subject": "ECON",
+      "number": "410",
+      "name": "Econometrics II",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "ECON_400"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "ECON_460",
+      "subject": "ECON",
+      "number": "460",
+      "name": "Topics in Applied Econometrics",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "ECON_400"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "GEOG_560",
+      "subject": "GEOG",
+      "number": "560",
+      "name": "Spatial Statistical Methods",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "GEOG_579",
+      "subject": "GEOG",
+      "number": "579",
+      "name": "Remote Sensing of the Environment",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "MATH_531",
+      "subject": "MATH",
+      "number": "531",
+      "name": "Probability Theory",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "MATH_234"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "MATH_635",
+      "subject": "MATH",
+      "number": "635",
+      "name": "Introduction to Brownian Motion and Stochastic Calculus",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "MATH_531"
+        ]
+      ],
+      "offered": [
+        "fall"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "STAT_351",
+      "subject": "STAT",
+      "number": "351",
+      "name": "Introduction to Probability Theory",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "MATH_222"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "STAT_421",
+      "subject": "STAT",
+      "number": "421",
+      "name": "Applied Regression Analysis",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "STAT_240"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "STAT_ME_424",
+      "subject": "STAT",
+      "number": "424",
+      "name": "Statistical Experimental Design",
+      "credits": 3,
+      "cross_listed_as": [
+        "ME_STAT_424"
+      ],
+      "prerequisites": [
+        [
+          "STAT_240"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "STAT_436",
+      "subject": "STAT",
+      "number": "436",
+      "name": "Applied Generalized Regression",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "STAT_421"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "STAT_443",
+      "subject": "STAT",
+      "number": "443",
+      "name": "Applied Multivariate Analysis",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "STAT_240"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "STAT_456",
+      "subject": "STAT",
+      "number": "456",
+      "name": "Introduction to Bayesian Data Analysis",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "STAT_240"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "STAT_461",
+      "subject": "STAT",
+      "number": "461",
+      "name": "Topics in Nonparametric Statistics",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "STAT_240"
+        ]
+      ],
+      "offered": [
+        "fall"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "STAT_575",
+      "subject": "STAT",
+      "number": "575",
+      "name": "Statistical Methods for Spatial Data",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "STAT_421"
+        ]
+      ],
+      "offered": [
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "BSE_405",
+      "subject": "BSE",
+      "number": "405",
+      "name": "Machine Learning for Biological Sciences",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "CHEM_361",
+      "subject": "CHEM",
+      "number": "361",
+      "name": "Physical Chemistry: Quantum Mechanics and Spectroscopy",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "CHEM_104",
+          "CHEM_116"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "COMP_SCI_ECE_ME_532",
+      "subject": "COMP SCI",
+      "number": "532",
+      "name": "Matrix Methods in Machine Learning",
+      "credits": 3,
+      "cross_listed_as": [
+        "ECE_COMP_SCI_ME_532",
+        "ME_COMP_SCI_ECE_532"
+      ],
+      "prerequisites": [
+        [
+          "MATH_340",
+          "MATH_341",
+          "MATH_320"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "COMP_SCI_ECE_ME_539",
+      "subject": "COMP SCI",
+      "number": "539",
+      "name": "Introduction to Artificial Neural Networks",
+      "credits": 3,
+      "cross_listed_as": [
+        "ECE_COMP_SCI_ME_539",
+        "ME_COMP_SCI_ECE_539"
+      ],
+      "prerequisites": [
+        [
+          "COMP_SCI_300",
+          "COMP_SCI_220"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "MATH_535",
+      "subject": "MATH",
+      "number": "535",
+      "name": "Mathematical Methods in Data Science",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "MATH_234"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "MATH_616",
+      "subject": "MATH",
+      "number": "616",
+      "name": "Introduction to Stochastic Processes",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "MATH_531"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "PHYSICS_361",
+      "subject": "PHYSICS",
+      "number": "361",
+      "name": "Computational Physics",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "PHYSICS_202",
+          "PHYSICS_208"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "ACT_SCI_655",
+      "subject": "ACT SCI",
+      "number": "655",
+      "name": "Theory of Interest and Life Contingencies",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "COMP_SCI_ECE_533",
+      "subject": "COMP SCI",
+      "number": "533",
+      "name": "Image Processing",
+      "credits": 3,
+      "cross_listed_as": [
+        "ECE_COMP_SCI_533"
+      ],
+      "prerequisites": [
+        [
+          "COMP_SCI_300",
+          "COMP_SCI_220"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "COMP_SCI_541",
+      "subject": "COMP SCI",
+      "number": "541",
+      "name": "Robotics",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "COMP_SCI_300",
+          "COMP_SCI_220"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "COMP_SCI_559",
+      "subject": "COMP SCI",
+      "number": "559",
+      "name": "Computer Graphics",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "COMP_SCI_300",
+          "COMP_SCI_220"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "COMP_SCI_BMI_567",
+      "subject": "COMP SCI",
+      "number": "567",
+      "name": "Health Data Management",
+      "credits": 3,
+      "cross_listed_as": [
+        "BMI_COMP_SCI_567"
+      ],
+      "prerequisites": [
+        [
+          "COMP_SCI_300",
+          "COMP_SCI_220"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "ECE_203",
+      "subject": "ECE",
+      "number": "203",
+      "name": "Signals, Information, and Computation",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "MATH_222"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": false
+    },
+    {
+      "id": "ECON_315",
+      "subject": "ECON",
+      "number": "315",
+      "name": "Applied Econometrics",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "ECON_570",
+      "subject": "ECON",
+      "number": "570",
+      "name": "Economics of Organizations",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "ECON_695",
+      "subject": "ECON",
+      "number": "695",
+      "name": "Topics in Data Science and Economics",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "FW_ECOL_395",
+      "subject": "F&W ECOL",
+      "number": "395",
+      "name": "Applied Data Analysis in Natural Resources",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "FW_ECOL_458",
+      "subject": "F&W ECOL",
+      "number": "458",
+      "name": "Ecological Modeling",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "GEN_BUS_317",
+      "subject": "GEN BUS",
+      "number": "317",
+      "name": "Business Data Analytics",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "GEOG_378",
+      "subject": "GEOG",
+      "number": "378",
+      "name": "Introduction to Geographic Information Systems",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": false
+    },
+    {
+      "id": "GEOG_572",
+      "subject": "GEOG",
+      "number": "572",
+      "name": "Spatial Data Science",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "GEOG_575",
+      "subject": "GEOG",
+      "number": "575",
+      "name": "Web Cartography and Visualization",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "INFO_SYS_322",
+      "subject": "INFO SYS",
+      "number": "322",
+      "name": "Introduction to Databases",
+      "credits": 3,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Introduction to relational database management systems, SQL, and data modeling."
+    },
+    {
+      "id": "INFO_SYS_423",
+      "subject": "INFO SYS",
+      "number": "423",
+      "name": "Business Intelligence",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "LIS_407",
+      "subject": "LIS",
+      "number": "407",
+      "name": "Introduction to Data Curation",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "LIS_440",
+      "subject": "LIS",
+      "number": "440",
+      "name": "Metadata for Information Organization",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "LIS_464",
+      "subject": "LIS",
+      "number": "464",
+      "name": "Information Visualization",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "LIS_501",
+      "subject": "LIS",
+      "number": "501",
+      "name": "Advanced Data Management",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "LSC_460",
+      "subject": "LSC",
+      "number": "460",
+      "name": "Social Aspects of Information",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "LSC_660",
+      "subject": "LSC",
+      "number": "660",
+      "name": "Data Science for Social Good",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "SOC_351",
+      "subject": "SOC",
+      "number": "351",
+      "name": "Computational Social Science",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "SOC_CE_SOC_618",
+      "subject": "SOC",
+      "number": "618",
+      "name": "Advanced Regression Analysis",
+      "credits": 3,
+      "cross_listed_as": [
+        "CE_SOC_SOC_618"
+      ],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "SOC_CE_SOC_693",
+      "subject": "SOC",
+      "number": "693",
+      "name": "Topics in Social Data Science",
+      "credits": 3,
+      "cross_listed_as": [
+        "CE_SOC_SOC_693"
+      ],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "SOIL_SCI_585",
+      "subject": "SOIL SCI",
+      "number": "585",
+      "name": "Environmental Data Analysis",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "STAT_405",
+      "subject": "STAT",
+      "number": "405",
+      "name": "Mathematical Statistics I",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "STAT_311",
+          "STAT_MATH_309"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "STAT_433",
+      "subject": "STAT",
+      "number": "433",
+      "name": "Applied Time Series Analysis",
+      "credits": 3,
+      "cross_listed_as": [],
+      "prerequisites": [
+        [
+          "STAT_240"
+        ]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "is_upper_level": true
+    },
+    {
+      "id": "ECON_102",
+      "subject": "ECON",
+      "number": "102",
+      "name": "Principles of Macroeconomics",
+      "credits": 4,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Awarded via AP Macroeconomics score 4-5. Counts toward Liberal Studies Social Science breadth."
+    },
+    {
+      "id": "ECON_301",
+      "subject": "ECON",
+      "number": "301",
+      "name": "Intermediate Microeconomic Theory",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [
+        ["ECON_101"]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Counts toward Liberal Studies Depth Level Condition (I/A course) and Social Science breadth."
+    },
+    {
+      "id": "ECON_302",
+      "subject": "ECON",
+      "number": "302",
+      "name": "Intermediate Macroeconomic Theory",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [
+        ["ECON_101"]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Counts toward Liberal Studies Depth Level Condition (I/A course) and Social Science breadth."
+    },
+    {
+      "id": "ECON_311",
+      "subject": "ECON",
+      "number": "311",
+      "name": "Money, Banking, and Financial Markets",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [
+        ["ECON_101"]
+      ],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Counts toward Liberal Studies Depth Level Condition (I/A course) and Social Science breadth."
+    },
+    {
+      "id": "PSYCH_202",
+      "subject": "PSYCH",
+      "number": "202",
+      "name": "Introduction to Psychology",
+      "credits": 3,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Awarded via AP Psychology score 4-5. Counts toward Liberal Studies Social Science breadth."
+    },
+    {
+      "id": "POLI_SCI_104",
+      "subject": "POLI SCI",
+      "number": "104",
+      "name": "Introduction to American Government",
+      "credits": 4,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Awarded via AP U.S. Government and Politics score 4-5. Counts toward Liberal Studies Social Science breadth."
+    },
+    {
+      "id": "POLI_SCI_120",
+      "subject": "POLI SCI",
+      "number": "120",
+      "name": "Introduction to Comparative Politics",
+      "credits": 4,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Awarded via AP Comparative Government and Politics score 4-5. Counts toward Liberal Studies Social Science breadth."
+    },
+    {
+      "id": "MUSIC_151",
+      "subject": "MUSIC",
+      "number": "151",
+      "name": "Music Theory I",
+      "credits": 3,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Awarded via AP Music Theory. Counts toward Liberal Studies Humanities breadth."
+    },
+    {
+      "id": "STAT_301",
+      "subject": "STAT",
+      "number": "301",
+      "name": "Introduction to Statistical Methods",
+      "credits": 3,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Awarded via AP Statistics score 4-5. Does NOT count toward IE professional electives per program rules. Eligible as free elective."
+    },
+    {
+      "id": "FRENCH_203",
+      "subject": "FRENCH",
+      "number": "203",
+      "name": "Intermediate French",
+      "credits": 4,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Awarded via AP French Language and Culture score 3."
+    },
+    {
+      "id": "FRENCH_204",
+      "subject": "FRENCH",
+      "number": "204",
+      "name": "Intermediate French II",
+      "credits": 4,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Awarded via AP French Language and Culture score 4."
+    },
+    {
+      "id": "FRENCH_228",
+      "subject": "FRENCH",
+      "number": "228",
+      "name": "Advanced French",
+      "credits": 4,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Awarded via AP French Language and Culture score 5."
+    },
+    {
+      "id": "GERMAN_249",
+      "subject": "GERMAN",
+      "number": "249",
+      "name": "German Language and Culture",
+      "credits": 3,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Awarded via AP German Language and Culture score 4-5."
+    },
+    {
+      "id": "ITALIAN_204",
+      "subject": "ITALIAN",
+      "number": "204",
+      "name": "Intermediate Italian",
+      "credits": 4,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Awarded via AP Italian Language and Culture score 3-4."
+    },
+    {
+      "id": "ITALIAN_452",
+      "subject": "ITALIAN",
+      "number": "452",
+      "name": "Advanced Italian",
+      "credits": 4,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Awarded via AP Italian Language and Culture score 5."
+    },
+    {
+      "id": "LATIN_103",
+      "subject": "LATIN",
+      "number": "103",
+      "name": "Elementary Latin I",
+      "credits": 4,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Awarded via AP Latin (first 4 cr of 8 cr total). See also LATIN 104."
+    },
+    {
+      "id": "LATIN_104",
+      "subject": "LATIN",
+      "number": "104",
+      "name": "Elementary Latin II",
+      "credits": 4,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Awarded via AP Latin (second 4 cr of 8 cr total). See also LATIN 103."
+    },
+    {
+      "id": "SPANISH_204",
+      "subject": "SPANISH",
+      "number": "204",
+      "name": "Intermediate Spanish",
+      "credits": 4,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Awarded via AP Spanish Language and Culture score 3-4, or AP Spanish Literature score 3."
+    },
+    {
+      "id": "SPANISH_224",
+      "subject": "SPANISH",
+      "number": "224",
+      "name": "Advanced Spanish Literature",
+      "credits": 3,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Awarded via AP Spanish Literature and Culture score 4-5."
+    },
+    {
+      "id": "SPANISH_226",
+      "subject": "SPANISH",
+      "number": "226",
+      "name": "Advanced Spanish",
+      "credits": 3,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Awarded via AP Spanish Language and Culture score 5."
+    },
+    {
+      "id": "AFROAMER_156",
+      "subject": "AFRO-AMER",
+      "number": "156",
+      "name": "Black Music and American Cultural History",
+      "credits": 3,
+      "is_upper_level": false,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Fulfills Ethnic Studies requirement and Humanities (H) breadth designation."
+    },
+    {
+      "id": "GEN_BUS_370",
+      "subject": "GEN BUS",
+      "number": "370",
+      "name": "Case Interview Analysis",
+      "credits": 1,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "spring"
+      ],
+      "notes": "Prepares students for case interviews: problem analysis, solution development, and presentation. 1 credit."
+    },
+    {
+      "id": "M_H_R_412",
+      "subject": "M H R",
+      "number": "412",
+      "name": "Management Consulting",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": ["MHR_412"],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Principles, methods, and tools of management consulting. Requires sophomore standing."
+    },
+    {
+      "id": "OTM_452",
+      "subject": "OTM",
+      "number": "452",
+      "name": "Project Management",
+      "credits": 3,
+      "is_upper_level": true,
+      "cross_listed_as": [],
+      "prerequisites": [],
+      "offered": [
+        "fall",
+        "spring"
+      ],
+      "notes": "Project initiation, scheduling, resource management, monitoring, agile methodologies, and contracting. Requires sophomore standing."
+    }
   ]
 }

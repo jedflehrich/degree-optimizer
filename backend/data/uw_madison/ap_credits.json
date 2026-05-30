@@ -1,0 +1,1002 @@
+{
+  "source": "UW-Madison Undergraduate Guide \u00e2\u20ac\u201d AP Credit Table",
+  "url": "https://guide.wisc.edu/undergraduate/#creditadvancedplacementtext",
+  "notes": "uw_courses lists actual UW-Madison course IDs that count toward degree requirements. generic_credit describes elective/placeholder credit that does not map to a specific catalog course.",
+  "ap_exams": [
+    {
+      "id": "art_2d",
+      "exam": "2-D Art and Design",
+      "category": "Arts",
+      "score_entries": [
+        {
+          "scores": [
+            3,
+            4,
+            5
+          ],
+          "uw_courses": [],
+          "generic_credit": "GEN ELCT X12",
+          "credits": 3,
+          "description": "General elective credit (3 cr)"
+        }
+      ]
+    },
+    {
+      "id": "art_3d",
+      "exam": "3-D Art and Design",
+      "category": "Arts",
+      "score_entries": [
+        {
+          "scores": [
+            3,
+            4,
+            5
+          ],
+          "uw_courses": [],
+          "generic_credit": "GEN ELCT X12",
+          "credits": 3,
+          "description": "General elective credit (3 cr)"
+        }
+      ]
+    },
+    {
+      "id": "art_drawing",
+      "exam": "Drawing",
+      "category": "Arts",
+      "score_entries": [
+        {
+          "scores": [
+            3,
+            4,
+            5
+          ],
+          "uw_courses": [],
+          "generic_credit": "GEN ELCT X12",
+          "credits": 3,
+          "description": "General elective credit (3 cr)"
+        }
+      ]
+    },
+    {
+      "id": "art_history",
+      "exam": "Art History",
+      "category": "Arts",
+      "score_entries": [
+        {
+          "scores": [
+            3
+          ],
+          "uw_courses": [],
+          "generic_credit": "HUM X11",
+          "credits": 3,
+          "description": "Humanities elective credit (3 cr)"
+        },
+        {
+          "scores": [
+            4,
+            5
+          ],
+          "uw_courses": [],
+          "generic_credit": "ART HIST X14",
+          "credits": 4,
+          "description": "Art History elective credit (4 cr)"
+        }
+      ]
+    },
+    {
+      "id": "music_theory",
+      "exam": "Music Theory",
+      "category": "Arts",
+      "score_entries": [
+        {
+          "scores": [
+            3,
+            4,
+            5
+          ],
+          "uw_courses": [
+            "MUSIC_151"
+          ],
+          "generic_credit": null,
+          "credits": 3,
+          "description": "MUSIC 151 (3 cr)"
+        }
+      ]
+    },
+    {
+      "id": "english_lang",
+      "exam": "English Language and Composition",
+      "category": "English",
+      "score_entries": [
+        {
+          "scores": [
+            3
+          ],
+          "uw_courses": [],
+          "generic_credit": "ENGL X02",
+          "credits": 3,
+          "description": "English elective credit (3 cr)"
+        },
+        {
+          "scores": [
+            4,
+            5
+          ],
+          "uw_courses": [
+            "ENGL_X04"
+          ],
+          "generic_credit": null,
+          "credits": 3,
+          "description": "Communication A credit (3 cr)"
+        }
+      ]
+    },
+    {
+      "id": "english_lit",
+      "exam": "English Literature and Composition",
+      "category": "English",
+      "score_entries": [
+        {
+          "scores": [
+            3
+          ],
+          "uw_courses": [],
+          "generic_credit": "LIT X10",
+          "credits": 3,
+          "description": "Literature elective credit (3 cr)"
+        },
+        {
+          "scores": [
+            4,
+            5
+          ],
+          "uw_courses": [],
+          "generic_credit": "ENGL X25",
+          "credits": 3,
+          "description": "Communication A credit (3 cr)"
+        }
+      ]
+    },
+    {
+      "id": "african_american_studies",
+      "exam": "African American Studies",
+      "category": "History and Social Sciences",
+      "score_entries": [
+        {
+          "scores": [
+            3,
+            4,
+            5
+          ],
+          "uw_courses": [],
+          "generic_credit": "AFROAMER X27",
+          "credits": 3,
+          "description": "African American Studies elective credit (3 cr)"
+        }
+      ]
+    },
+    {
+      "id": "comparative_gov",
+      "exam": "Comparative Government and Politics",
+      "category": "History and Social Sciences",
+      "score_entries": [
+        {
+          "scores": [
+            3
+          ],
+          "uw_courses": [],
+          "generic_credit": "POLI SCI X20",
+          "credits": 3,
+          "description": "Political Science elective credit (3 cr)"
+        },
+        {
+          "scores": [
+            4,
+            5
+          ],
+          "uw_courses": [
+            "POLI_SCI_120"
+          ],
+          "generic_credit": null,
+          "credits": 4,
+          "description": "POLI SCI 120 (4 cr)"
+        }
+      ]
+    },
+    {
+      "id": "european_history",
+      "exam": "European History",
+      "category": "History and Social Sciences",
+      "score_entries": [
+        {
+          "scores": [
+            3
+          ],
+          "uw_courses": [],
+          "generic_credit": "GEN ELCT X12",
+          "credits": 3,
+          "description": "General elective credit (3 cr)"
+        },
+        {
+          "scores": [
+            4,
+            5
+          ],
+          "uw_courses": [],
+          "generic_credit": "HISTORY X13",
+          "credits": 3,
+          "description": "History elective credit (3 cr)"
+        }
+      ]
+    },
+    {
+      "id": "human_geography",
+      "exam": "Human Geography",
+      "category": "History and Social Sciences",
+      "score_entries": [
+        {
+          "scores": [
+            3
+          ],
+          "uw_courses": [],
+          "generic_credit": "GEOG X12",
+          "credits": 3,
+          "description": "Geography elective credit (3 cr)"
+        },
+        {
+          "scores": [
+            4,
+            5
+          ],
+          "uw_courses": [],
+          "generic_credit": "GEOG X22",
+          "credits": 3,
+          "description": "Geography elective credit / Social Sciences (3 cr)"
+        }
+      ]
+    },
+    {
+      "id": "macroeconomics",
+      "exam": "Macroeconomics",
+      "category": "History and Social Sciences",
+      "score_entries": [
+        {
+          "scores": [
+            3
+          ],
+          "uw_courses": [],
+          "generic_credit": "GEN ELCT X12",
+          "credits": 3,
+          "description": "General elective credit (3 cr)"
+        },
+        {
+          "scores": [
+            4,
+            5
+          ],
+          "uw_courses": [
+            "ECON_102"
+          ],
+          "generic_credit": null,
+          "credits": 4,
+          "description": "ECON 102 (4 cr)"
+        }
+      ]
+    },
+    {
+      "id": "microeconomics",
+      "exam": "Microeconomics",
+      "category": "History and Social Sciences",
+      "score_entries": [
+        {
+          "scores": [
+            3
+          ],
+          "uw_courses": [],
+          "generic_credit": "GEN ELCT X12",
+          "credits": 3,
+          "description": "General elective credit (3 cr)"
+        },
+        {
+          "scores": [
+            4,
+            5
+          ],
+          "uw_courses": [
+            "ECON_101"
+          ],
+          "generic_credit": null,
+          "credits": 4,
+          "description": "ECON 101 (4 cr)"
+        }
+      ]
+    },
+    {
+      "id": "psychology",
+      "exam": "Psychology",
+      "category": "History and Social Sciences",
+      "score_entries": [
+        {
+          "scores": [
+            3
+          ],
+          "uw_courses": [],
+          "generic_credit": "PSYCH X19",
+          "credits": 3,
+          "description": "Psychology elective credit (3 cr)"
+        },
+        {
+          "scores": [
+            4,
+            5
+          ],
+          "uw_courses": [
+            "PSYCH_202"
+          ],
+          "generic_credit": null,
+          "credits": 3,
+          "description": "PSYCH 202 (3 cr)"
+        }
+      ]
+    },
+    {
+      "id": "us_gov",
+      "exam": "United States Government and Politics",
+      "category": "History and Social Sciences",
+      "score_entries": [
+        {
+          "scores": [
+            3
+          ],
+          "uw_courses": [],
+          "generic_credit": "POLI SCI X20",
+          "credits": 3,
+          "description": "Political Science elective credit (3 cr)"
+        },
+        {
+          "scores": [
+            4,
+            5
+          ],
+          "uw_courses": [
+            "POLI_SCI_104"
+          ],
+          "generic_credit": null,
+          "credits": 4,
+          "description": "POLI SCI 104 (4 cr)"
+        }
+      ]
+    },
+    {
+      "id": "us_history",
+      "exam": "United States History",
+      "category": "History and Social Sciences",
+      "score_entries": [
+        {
+          "scores": [
+            3
+          ],
+          "uw_courses": [],
+          "generic_credit": "GEN ELCT X12",
+          "credits": 3,
+          "description": "General elective credit (3 cr)"
+        },
+        {
+          "scores": [
+            4,
+            5
+          ],
+          "uw_courses": [],
+          "generic_credit": "HISTORY X13",
+          "credits": 3,
+          "description": "History elective credit (3 cr)"
+        }
+      ]
+    },
+    {
+      "id": "world_history",
+      "exam": "World History: Modern",
+      "category": "History and Social Sciences",
+      "score_entries": [
+        {
+          "scores": [
+            3
+          ],
+          "uw_courses": [],
+          "generic_credit": "GEN ELCT X12",
+          "credits": 3,
+          "description": "General elective credit (3 cr)"
+        },
+        {
+          "scores": [
+            4,
+            5
+          ],
+          "uw_courses": [],
+          "generic_credit": "HISTORY X13",
+          "credits": 3,
+          "description": "History elective credit (3 cr)"
+        }
+      ]
+    },
+    {
+      "id": "precalculus",
+      "exam": "Precalculus",
+      "category": "Math and Computer Science",
+      "score_entries": [
+        {
+          "scores": [
+            3
+          ],
+          "uw_courses": [],
+          "generic_credit": "MATH X05",
+          "credits": 3,
+          "description": "Math elective credit (3 cr)"
+        },
+        {
+          "scores": [
+            4,
+            5
+          ],
+          "uw_courses": [
+            "MATH_114"
+          ],
+          "generic_credit": null,
+          "credits": 5,
+          "description": "MATH 114 (5 cr)"
+        }
+      ]
+    },
+    {
+      "id": "calc_ab",
+      "exam": "Calculus AB",
+      "category": "Math and Computer Science",
+      "score_entries": [
+        {
+          "scores": [
+            3
+          ],
+          "uw_courses": [],
+          "generic_credit": "MATH X03",
+          "credits": 3,
+          "description": "Math elective credit (3 cr)"
+        },
+        {
+          "scores": [
+            4,
+            5
+          ],
+          "uw_courses": [
+            "MATH_221"
+          ],
+          "generic_credit": null,
+          "credits": 5,
+          "description": "MATH 221 (5 cr)"
+        }
+      ]
+    },
+    {
+      "id": "calc_bc",
+      "exam": "Calculus BC",
+      "category": "Math and Computer Science",
+      "notes": "The AB subscore on the BC exam follows the same rules as Calculus AB.",
+      "score_entries": [
+        {
+          "scores": [
+            3
+          ],
+          "uw_courses": [],
+          "generic_credit": "MATH X03",
+          "credits": 3,
+          "description": "Math elective credit (3 cr)"
+        },
+        {
+          "scores": [
+            4,
+            5
+          ],
+          "uw_courses": [
+            "MATH_221",
+            "MATH_222"
+          ],
+          "generic_credit": null,
+          "credits": 9,
+          "description": "MATH 221 + MATH 222 (9 cr)"
+        }
+      ]
+    },
+    {
+      "id": "cs_a",
+      "exam": "Computer Science A",
+      "category": "Math and Computer Science",
+      "notes": "Earns COMP SCI 200 credit. Note: UW-Madison DS/IE programs require COMP SCI 220 or 300, which are distinct courses. AP CS A does not directly satisfy that requirement.",
+      "score_entries": [
+        {
+          "scores": [
+            3,
+            4,
+            5
+          ],
+          "uw_courses": [
+            "COMP_SCI_200"
+          ],
+          "generic_credit": null,
+          "credits": 3,
+          "description": "COMP SCI 200 (3 cr)"
+        }
+      ]
+    },
+    {
+      "id": "cs_principles",
+      "exam": "Computer Science Principles",
+      "category": "Math and Computer Science",
+      "score_entries": [
+        {
+          "scores": [
+            3
+          ],
+          "uw_courses": [],
+          "generic_credit": "GEN ELCT X12",
+          "credits": 3,
+          "description": "General elective credit (3 cr)"
+        },
+        {
+          "scores": [
+            4,
+            5
+          ],
+          "uw_courses": [],
+          "generic_credit": "COMP SCI/LIS 102",
+          "credits": 3,
+          "description": "COMP SCI/LIS 102 credit (3 cr)"
+        }
+      ]
+    },
+    {
+      "id": "statistics",
+      "exam": "Statistics",
+      "category": "Math and Computer Science",
+      "notes": "Earns STAT 301 credit. Note: DS programs require STAT 240 and STAT 311/310, which are distinct courses. AP Statistics does not directly satisfy those requirements.",
+      "score_entries": [
+        {
+          "scores": [
+            3
+          ],
+          "uw_courses": [],
+          "generic_credit": "STAT X10",
+          "credits": 3,
+          "description": "Statistics elective credit (3 cr)"
+        },
+        {
+          "scores": [
+            4,
+            5
+          ],
+          "uw_courses": [
+            "STAT_301"
+          ],
+          "generic_credit": null,
+          "credits": 3,
+          "description": "STAT 301 (3 cr)"
+        }
+      ]
+    },
+    {
+      "id": "biology",
+      "exam": "Biology",
+      "category": "Sciences",
+      "score_entries": [
+        {
+          "scores": [
+            3
+          ],
+          "uw_courses": [],
+          "generic_credit": "BIO SCI X01",
+          "credits": 3,
+          "description": "Biology elective credit (3 cr)"
+        },
+        {
+          "scores": [
+            4,
+            5
+          ],
+          "uw_courses": [
+            "BIOLOGY_151"
+          ],
+          "generic_credit": null,
+          "credits": 5,
+          "description": "BIOLOGY/BOTANY/ZOOLOGY 151 (5 cr)"
+        }
+      ]
+    },
+    {
+      "id": "chemistry",
+      "exam": "Chemistry",
+      "category": "Sciences",
+      "score_entries": [
+        {
+          "scores": [
+            3
+          ],
+          "uw_courses": [],
+          "generic_credit": "CHEM X15",
+          "credits": 3,
+          "description": "Chemistry elective credit (3 cr)"
+        },
+        {
+          "scores": [
+            4,
+            5
+          ],
+          "uw_courses": [
+            "CHEM_103"
+          ],
+          "generic_credit": null,
+          "credits": 3,
+          "description": "CHEM 103 (3 cr)"
+        }
+      ]
+    },
+    {
+      "id": "env_science",
+      "exam": "Environmental Science",
+      "category": "Sciences",
+      "score_entries": [
+        {
+          "scores": [
+            3,
+            4,
+            5
+          ],
+          "uw_courses": [],
+          "generic_credit": "BIO SCI X12",
+          "credits": 3,
+          "description": "Biology elective credit (3 cr)"
+        }
+      ]
+    },
+    {
+      "id": "physics_1",
+      "exam": "Physics 1: Algebra-Based",
+      "category": "Sciences",
+      "score_entries": [
+        {
+          "scores": [
+            3
+          ],
+          "uw_courses": [],
+          "generic_credit": "PHYSICS X15",
+          "credits": 3,
+          "description": "Physics elective credit (3 cr)"
+        },
+        {
+          "scores": [
+            4,
+            5
+          ],
+          "uw_courses": [
+            "PHYSICS_103"
+          ],
+          "generic_credit": null,
+          "credits": 4,
+          "description": "PHYSICS 103 (4 cr)"
+        }
+      ]
+    },
+    {
+      "id": "physics_2",
+      "exam": "Physics 2: Algebra-Based",
+      "category": "Sciences",
+      "score_entries": [
+        {
+          "scores": [
+            3
+          ],
+          "uw_courses": [],
+          "generic_credit": "PHYSICS X15",
+          "credits": 3,
+          "description": "Physics elective credit (3 cr)"
+        },
+        {
+          "scores": [
+            4,
+            5
+          ],
+          "uw_courses": [
+            "PHYSICS_104"
+          ],
+          "generic_credit": null,
+          "credits": 4,
+          "description": "PHYSICS 104 (4 cr)"
+        }
+      ]
+    },
+    {
+      "id": "physics_c_em",
+      "exam": "Physics C: Electricity and Magnetism",
+      "category": "Sciences",
+      "score_entries": [
+        {
+          "scores": [
+            3
+          ],
+          "uw_courses": [],
+          "generic_credit": "PHYSICS X15",
+          "credits": 3,
+          "description": "Physics elective credit (3 cr)"
+        },
+        {
+          "scores": [
+            4,
+            5
+          ],
+          "uw_courses": [
+            "PHYSICS_208"
+          ],
+          "generic_credit": null,
+          "credits": 5,
+          "description": "PHYSICS 208 (5 cr)"
+        }
+      ]
+    },
+    {
+      "id": "physics_c_mech",
+      "exam": "Physics C: Mechanics",
+      "category": "Sciences",
+      "score_entries": [
+        {
+          "scores": [
+            3
+          ],
+          "uw_courses": [],
+          "generic_credit": "PHYSICS X15",
+          "credits": 3,
+          "description": "Physics elective credit (3 cr)"
+        },
+        {
+          "scores": [
+            4,
+            5
+          ],
+          "uw_courses": [
+            "PHYSICS_207"
+          ],
+          "generic_credit": null,
+          "credits": 5,
+          "description": "PHYSICS 207 (5 cr)"
+        }
+      ]
+    },
+    {
+      "id": "chinese",
+      "exam": "Chinese Language and Culture",
+      "category": "World Languages",
+      "score_entries": [
+        {
+          "scores": [
+            3
+          ],
+          "uw_courses": [],
+          "generic_credit": "ASIALANG X10",
+          "credits": 2,
+          "description": "Asian Language elective credit (2 cr)"
+        },
+        {
+          "scores": [
+            4,
+            5
+          ],
+          "uw_courses": [],
+          "generic_credit": "ASIALANG X10",
+          "credits": 4,
+          "description": "Asian Language elective credit (4 cr)"
+        }
+      ]
+    },
+    {
+      "id": "french",
+      "exam": "French Language and Culture",
+      "category": "World Languages",
+      "score_entries": [
+        {
+          "scores": [
+            3
+          ],
+          "uw_courses": [
+            "FRENCH_203"
+          ],
+          "generic_credit": null,
+          "credits": 4,
+          "description": "FRENCH 203 (4 cr)"
+        },
+        {
+          "scores": [
+            4
+          ],
+          "uw_courses": [
+            "FRENCH_204"
+          ],
+          "generic_credit": null,
+          "credits": 4,
+          "description": "FRENCH 204 (4 cr)"
+        },
+        {
+          "scores": [
+            5
+          ],
+          "uw_courses": [
+            "FRENCH_228"
+          ],
+          "generic_credit": null,
+          "credits": 4,
+          "description": "FRENCH 228 (4 cr)"
+        }
+      ]
+    },
+    {
+      "id": "german",
+      "exam": "German Language and Culture",
+      "category": "World Languages",
+      "score_entries": [
+        {
+          "scores": [
+            3
+          ],
+          "uw_courses": [],
+          "generic_credit": "GERMAN X13",
+          "credits": 3,
+          "description": "German elective credit (3 cr)"
+        },
+        {
+          "scores": [
+            4,
+            5
+          ],
+          "uw_courses": [
+            "GERMAN_249"
+          ],
+          "generic_credit": null,
+          "credits": 3,
+          "description": "GERMAN 249 (3 cr)"
+        }
+      ]
+    },
+    {
+      "id": "italian",
+      "exam": "Italian Language and Culture",
+      "category": "World Languages",
+      "score_entries": [
+        {
+          "scores": [
+            3,
+            4
+          ],
+          "uw_courses": [
+            "ITALIAN_204"
+          ],
+          "generic_credit": null,
+          "credits": 4,
+          "description": "ITALIAN 204 (4 cr)"
+        },
+        {
+          "scores": [
+            5
+          ],
+          "uw_courses": [
+            "ITALIAN_452"
+          ],
+          "generic_credit": null,
+          "credits": 4,
+          "description": "ITALIAN 452 (4 cr)"
+        }
+      ]
+    },
+    {
+      "id": "japanese",
+      "exam": "Japanese Language and Culture",
+      "category": "World Languages",
+      "score_entries": [
+        {
+          "scores": [
+            3
+          ],
+          "uw_courses": [],
+          "generic_credit": "ASIALANG X10",
+          "credits": 2,
+          "description": "Asian Language elective credit (2 cr)"
+        },
+        {
+          "scores": [
+            4,
+            5
+          ],
+          "uw_courses": [],
+          "generic_credit": "ASIALANG X10",
+          "credits": 4,
+          "description": "Asian Language elective credit (4 cr)"
+        }
+      ]
+    },
+    {
+      "id": "latin",
+      "exam": "Latin",
+      "category": "World Languages",
+      "score_entries": [
+        {
+          "scores": [
+            3,
+            4,
+            5
+          ],
+          "uw_courses": [
+            "LATIN_103",
+            "LATIN_104"
+          ],
+          "generic_credit": null,
+          "credits": 8,
+          "description": "LATIN 103 + LATIN 104 (8 cr)"
+        }
+      ]
+    },
+    {
+      "id": "spanish_lang",
+      "exam": "Spanish Language and Culture",
+      "category": "World Languages",
+      "score_entries": [
+        {
+          "scores": [
+            3,
+            4
+          ],
+          "uw_courses": [
+            "SPANISH_204"
+          ],
+          "generic_credit": null,
+          "credits": 4,
+          "description": "SPANISH 204 (4 cr)"
+        },
+        {
+          "scores": [
+            5
+          ],
+          "uw_courses": [
+            "SPANISH_226"
+          ],
+          "generic_credit": null,
+          "credits": 3,
+          "description": "SPANISH 226 (3 cr)"
+        }
+      ]
+    },
+    {
+      "id": "spanish_lit",
+      "exam": "Spanish Literature and Culture",
+      "category": "World Languages",
+      "score_entries": [
+        {
+          "scores": [
+            3
+          ],
+          "uw_courses": [
+            "SPANISH_204"
+          ],
+          "generic_credit": null,
+          "credits": 4,
+          "description": "SPANISH 204 (4 cr)"
+        },
+        {
+          "scores": [
+            4,
+            5
+          ],
+          "uw_courses": [
+            "SPANISH_224"
+          ],
+          "generic_credit": null,
+          "credits": 3,
+          "description": "SPANISH 224 (3 cr)"
+        }
+      ]
+    }
+  ]
+}

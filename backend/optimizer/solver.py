@@ -36,6 +36,11 @@ class CourseRecommendation:
     # Course IDs that must be completed before this one (already-completed
     # prereqs are excluded — only MISSING prereqs appear here).
     missing_prereqs: list[str] = field(default_factory=list)
+    # Course IDs that must be taken in the same semester as this course.
+    co_requisites: list[str] = field(default_factory=list)
+    # Prerequisite IDs where concurrent enrollment is allowed — the student
+    # may take this course and the listed prereq(s) in the same semester.
+    concurrent_prereqs: list[str] = field(default_factory=list)
     # True if this course was added purely to satisfy a prerequisite chain,
     # not because it directly fills a degree requirement.
     is_prereq_filler: bool = False
@@ -102,6 +107,7 @@ class Optimizer:
         completed: set[str],
         target_program_ids: list[str],
         goal: OptimizationGoal = OptimizationGoal.EARLIEST_GRADUATION,
+        one_of_overrides: dict[str, str] | None = None,
     ) -> OptimizationResult:
         """
         Run the optimizer.
@@ -129,7 +135,7 @@ class Optimizer:
         # Step 2: Collect every unsatisfied group across all programs.
         unsatisfied: list[tuple[str, GroupStatus]] = []  # (program_id, group)
         for status in program_statuses:
-            for group in self._flatten_unsatisfied(status.group_statuses):
+            for group in self._flatten_unsatisfied(status.group_statuses, one_of_overrides):
                 unsatisfied.append((status.program_id, group))
 
         # Step 3: Build a working set of courses to recommend.
@@ -206,18 +212,68 @@ class Optimizer:
     # Internal helpers
     # ------------------------------------------------------------------
 
-    def _flatten_unsatisfied(self, statuses: list[GroupStatus]) -> list[GroupStatus]:
+    def _flatten_unsatisfied(
+        self,
+        statuses: list[GroupStatus],
+        one_of_overrides: dict[str, str] | None = None,
+    ) -> list[GroupStatus]:
         """
         Recursively walk group statuses and return all unsatisfied leaf groups.
         We skip parent groups that are unsatisfied only because their children
         are — the children are where the actionable work lives.
+
+        one_of_overrides: maps group_id → chosen sub-group id.  When a group's
+        id appears in this dict, only the specified child is recursed into
+        (instead of all unsatisfied children).  Used for focus area selection.
         """
+        from backend.api.models import RequirementType  # local import avoids circular
         result = []
         for status in statuses:
             if status.satisfied:
                 continue
             if status.sub_statuses:
-                result.extend(self._flatten_unsatisfied(status.sub_statuses))
+                # If the student chose a specific sub-group, only satisfy that one.
+                if one_of_overrides and status.group_id in one_of_overrides:
+                    chosen_id = one_of_overrides[status.group_id]
+                    chosen_sub = next(
+                        (s for s in status.sub_statuses if s.group_id == chosen_id),
+                        None,
+                    )
+                    if chosen_sub and not chosen_sub.satisfied:
+                        result.extend(self._flatten_unsatisfied([chosen_sub], one_of_overrides))
+                elif status.group_type == RequirementType.ONE_OF:
+                    # ONE_OF with sub_groups and no user override.
+                    # Auto-pick the unsatisfied sub-group with the lowest CREDIT cost
+                    # so the optimizer gives a concrete, sensible recommendation.
+                    # The user can always override via one_of_overrides.
+                    unsatisfied_subs = [s for s in status.sub_statuses if not s.satisfied]
+                    if unsatisfied_subs:
+                        def _sub_cost(s: "GroupStatus") -> int:
+                            # Use estimated credits (not raw counts) so that a group
+                            # requiring 5 one-credit research papers doesn't look
+                            # cheaper than a group requiring 3 three-credit courses.
+                            # missing_required: use actual catalog credits where possible.
+                            missing_cr = sum(
+                                self._get_credits(c) for c in s.missing_required
+                            )
+                            return (
+                                missing_cr
+                                + s.courses_still_needed * 3   # ~3 cr per course
+                                + s.credits_still_needed
+                                + sum(_sub_cost(ss) for ss in s.sub_statuses if not ss.satisfied)
+                            )
+                        cheapest = min(unsatisfied_subs, key=_sub_cost)
+                        result.extend(self._flatten_unsatisfied([cheapest], one_of_overrides))
+                    # If all subs are satisfied somehow, nothing to add.
+                else:
+                    # ALL_REQUIRED (and any other type): recurse into all children.
+                    result.extend(self._flatten_unsatisfied(status.sub_statuses, one_of_overrides))
+                # Also surface this group if it has its own unmet direct course
+                # requirements (e.g. foundational_ds has STAT_340 + COMP_SCI_320
+                # as direct courses alongside its sub-groups).  Without this,
+                # those direct courses are invisible to the optimizer.
+                if status.missing_required:
+                    result.append(status)
             else:
                 result.append(status)
         return result
@@ -279,6 +335,23 @@ class Optimizer:
             credits_still_needed = group.credits_still_needed
             courses_still_needed = group.courses_still_needed
 
+            # Credit already-recommended courses that are eligible for this group.
+            # Without this, courses picked for an earlier group (e.g. AFROAMER_156
+            # for liberal_studies_ethnic) are ignored when processing a later group
+            # that the same course satisfies (liberal_studies_humanities), causing
+            # the optimizer to pick redundant extra courses.
+            eligible_pool = set(group.eligible_remaining) | set(group.missing_required)
+            for cid in already_recommended:
+                if cid in eligible_pool:
+                    credits_still_needed -= self._get_credits(cid)
+                    courses_still_needed -= 1
+            credits_still_needed = max(0, credits_still_needed)
+            courses_still_needed = max(0, courses_still_needed)
+
+            # If already satisfied by previously recommended courses, nothing to add.
+            if credits_still_needed <= 0 and courses_still_needed <= 0:
+                return
+
             for course_id, score in scored:
                 if credits_still_needed <= 0 and courses_still_needed <= 0:
                     break
@@ -312,6 +385,8 @@ class Optimizer:
             credits=course.credits if course else 3,
             satisfies_groups=satisfies,
             overlap_score=score,
+            co_requisites=course.co_requisites if course else [],
+            concurrent_prereqs=course.concurrent_prereqs if course else [],
         ))
 
     def _overlap_score(self, course_id: str, all_unsatisfied: list[tuple[str, GroupStatus]]) -> int:
@@ -386,6 +461,8 @@ class Optimizer:
                     credits=course.credits if course else 3,
                     satisfies_groups=[],
                     overlap_score=self._overlap_score(best, all_unsatisfied),
+                    co_requisites=course.co_requisites if course else [],
+                    concurrent_prereqs=course.concurrent_prereqs if course else [],
                     is_prereq_filler=True,
                 )
                 prereq_only.append(prereq_rec)

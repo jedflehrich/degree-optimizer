@@ -1,0 +1,109 @@
+{
+  "program_id": "uw-madison-consulting-certificate-2025",
+  "university": "uw-madison",
+  "name": "Consulting",
+  "degree": "Certificate",
+  "catalog_year": "2025-2026",
+  "total_credits_required": 13,
+  "residency_credits_required": 13,
+  "upper_level_credits_required": null,
+  "in_major_credits_required": 13,
+  "gpa_required": 3.0,
+  "overlap_rules": [],
+  "requirement_groups": [
+    {
+      "id": "core_required",
+      "name": "Core Required Courses",
+      "description": "GEN BUS 370 and OTM 452 are required.",
+      "type": "all_required",
+      "credits_required": null,
+      "courses_required": null,
+      "courses": [
+        "GEN_BUS_370",
+        "OTM_452"
+      ],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "GEN BUS 370 is 1 credit; OTM 452 is 3 credits. Total 4 credits."
+    },
+    {
+      "id": "consulting_foundation",
+      "name": "Consulting Foundation",
+      "description": "Complete one course from the Consulting Foundation list.",
+      "type": "one_of",
+      "credits_required": null,
+      "courses_required": 1,
+      "courses": [
+        "M_H_R_412",
+        "M_H_R_423",
+        "OTM_351"
+      ],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "3 credits."
+    },
+    {
+      "id": "analytical_thinking",
+      "name": "Analytical Thinking",
+      "description": "Complete one course from the Analytical Thinking list.",
+      "type": "one_of",
+      "credits_required": null,
+      "courses_required": 1,
+      "courses": [
+        "ACCT_I_S_640",
+        "ACT_SCI_655",
+        "ISYE_412",
+        "ISYE_516",
+        "ISYE_620",
+        "INFO_SYS_423",
+        "M_H_R_614",
+        "OTM_453",
+        "R_M_I_660"
+      ],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "3 credits."
+    },
+    {
+      "id": "additional_coursework",
+      "name": "Additional Coursework",
+      "description": "Complete one more course from the Consulting Foundation, Analytical Thinking, or Elective list.",
+      "type": "one_of",
+      "credits_required": null,
+      "courses_required": 1,
+      "courses": [
+        "M_H_R_412",
+        "M_H_R_423",
+        "OTM_351",
+        "ACCT_I_S_640",
+        "ACT_SCI_655",
+        "ISYE_412",
+        "ISYE_516",
+        "ISYE_620",
+        "INFO_SYS_423",
+        "M_H_R_614",
+        "OTM_453",
+        "R_M_I_660",
+        "INFO_SYS_322",
+        "ISYE_313",
+        "ISYE_515",
+        "ISYE_520",
+        "ISYE_604",
+        "M_H_R_322",
+        "M_H_R_422",
+        "M_H_R_401",
+        "M_H_R_420",
+        "M_H_R_628",
+        "OTM_421",
+        "OTM_427",
+        "OTM_451",
+        "R_M_I_650",
+        "R_M_I_655",
+        "R_M_I_670"
+      ],
+      "sub_groups": [],
+      "distinct_from_groups": ["consulting_foundation", "analytical_thinking"],
+      "notes": "3 credits. Must be a different course than what was used for Consulting Foundation and Analytical Thinking."
+    }
+  ]
+}

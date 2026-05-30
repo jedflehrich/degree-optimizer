@@ -1,0 +1,295 @@
+{
+  "program_id": "uw-madison-finance-bba-2025",
+  "university": "uw-madison",
+  "name": "Business: Finance, Investment, and Banking",
+  "degree": "BBA",
+  "catalog_year": "2025-2026",
+  "total_credits_required": 120,
+  "residency_credits_required": 30,
+  "upper_level_credits_required": null,
+  "in_major_credits_required": 25,
+  "gpa_required": 2.0,
+  "overlap_rules": [],
+  "requirement_groups": [
+    {
+      "id": "bba_liberal_studies_economics",
+      "name": "BBA Liberal Studies — Economics",
+      "description": "Complete one economics principles course.",
+      "type": "one_of",
+      "credits_required": null,
+      "courses_required": 1,
+      "courses": ["ECON_101", "ECON_111"],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "4 credits. Required for all BBA students."
+    },
+    {
+      "id": "bba_liberal_studies_human_behavior",
+      "name": "BBA Liberal Studies — Human Behavior",
+      "description": "Complete one human behavior course.",
+      "type": "one_of",
+      "credits_required": null,
+      "courses_required": 1,
+      "courses": ["PSYCH_202", "SOC_211", "ANTHRO_104", "GEN&WS_102", "HDFS_263"],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "3–4 credits."
+    },
+    {
+      "id": "bba_liberal_studies_calculus",
+      "name": "BBA Liberal Studies — Calculus",
+      "description": "Complete one calculus course (Survey of Calculus 1 level or higher).",
+      "type": "one_of",
+      "credits_required": null,
+      "courses_required": 1,
+      "courses": ["MATH_211", "MATH_217", "MATH_221"],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "3–5 credits."
+    },
+    {
+      "id": "bba_liberal_studies_ethics",
+      "name": "BBA Liberal Studies — Ethics",
+      "description": "Complete one ethics course.",
+      "type": "one_of",
+      "credits_required": null,
+      "courses_required": 1,
+      "courses": ["PHILOS_241", "PHILOS_243", "PHILOS_341", "PHILOS_441", "L_I_S_461"],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "3–4 credits. PHILOS/ENVIR ST 441 is cross-listed."
+    },
+    {
+      "id": "bba_fundamentals",
+      "name": "Business Fundamentals",
+      "description": "All required business fundamentals courses.",
+      "type": "all_required",
+      "credits_required": null,
+      "courses_required": null,
+      "courses": [
+        "GEN_BUS_110",
+        "GEN_BUS_106",
+        "ECON_102",
+        "GEN_BUS_360",
+        "ACCT_I_S_100",
+        "ACCT_I_S_211"
+      ],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "ECON 111 may substitute for ECON 102. Total ~14 credits."
+    },
+    {
+      "id": "bba_analytics",
+      "name": "Business Analytics Sequence",
+      "description": "Complete one of three analytics sequence options.",
+      "type": "one_of",
+      "credits_required": null,
+      "courses_required": 1,
+      "courses": [],
+      "sub_groups": [
+        {
+          "id": "analytics_opt1",
+          "name": "Option 1: GEN BUS Analytics",
+          "description": "GEN BUS 306 + GEN BUS 307",
+          "type": "all_required",
+          "credits_required": null,
+          "courses_required": null,
+          "courses": ["GEN_BUS_306", "GEN_BUS_307"],
+          "sub_groups": [],
+          "distinct_from_groups": [],
+          "notes": "6 credits. Most common option."
+        },
+        {
+          "id": "analytics_opt2",
+          "name": "Option 2: Probability + Stats (Actuarial Science)",
+          "description": "(MATH 331 or STAT/MATH 309) + (GEN BUS 317 or STAT/MATH 310)",
+          "type": "all_required",
+          "credits_required": null,
+          "courses_required": null,
+          "courses": [],
+          "sub_groups": [
+            {
+              "id": "analytics_opt2a",
+              "name": "Probability Course",
+              "description": "MATH 331 or STAT/MATH 309",
+              "type": "one_of",
+              "credits_required": null,
+              "courses_required": 1,
+              "courses": ["MATH_331", "STAT_MATH_309"],
+              "sub_groups": [],
+              "distinct_from_groups": [],
+              "notes": null
+            },
+            {
+              "id": "analytics_opt2b",
+              "name": "Stats II or GEN BUS 317",
+              "description": "GEN BUS 317 or STAT/MATH 310",
+              "type": "one_of",
+              "credits_required": null,
+              "courses_required": 1,
+              "courses": ["GEN_BUS_317", "STAT_MATH_310"],
+              "sub_groups": [],
+              "distinct_from_groups": [],
+              "notes": null
+            }
+          ],
+          "distinct_from_groups": [],
+          "notes": "Recommended for Actuarial Science majors."
+        },
+        {
+          "id": "analytics_opt3",
+          "name": "Option 3: Econometrics (Econ Double Majors)",
+          "description": "ECON 310 + (ECON 400 or ECON 410)",
+          "type": "all_required",
+          "credits_required": null,
+          "courses_required": null,
+          "courses": ["ECON_310"],
+          "sub_groups": [
+            {
+              "id": "analytics_opt3b",
+              "name": "Econometrics II",
+              "description": "ECON 400 or ECON 410",
+              "type": "one_of",
+              "credits_required": null,
+              "courses_required": 1,
+              "courses": ["ECON_400", "ECON_410"],
+              "sub_groups": [],
+              "distinct_from_groups": [],
+              "notes": null
+            }
+          ],
+          "distinct_from_groups": [],
+          "notes": "Recommended for Economics double majors or Econ certificate students."
+        }
+      ],
+      "distinct_from_groups": [],
+      "notes": "6–8 credits."
+    },
+    {
+      "id": "bba_core",
+      "name": "Business Core",
+      "description": "All six required Business Core courses.",
+      "type": "all_required",
+      "credits_required": null,
+      "courses_required": null,
+      "courses": [
+        "FINANCE_300",
+        "MARKETNG_300",
+        "M_H_R_300",
+        "OTM_300",
+        "GEN_BUS_301",
+        "GEN_BUS_400"
+      ],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "18 credits. FINANCE/ECON 300 is cross-listed."
+    },
+    {
+      "id": "bba_signature_one",
+      "name": "Business Signature — Choose One",
+      "description": "Select one course from the signature list.",
+      "type": "one_of",
+      "credits_required": null,
+      "courses_required": 1,
+      "courses": [
+        "INFO_SYS_322",
+        "INTL_BUS_200",
+        "A_A_E_ECON_REAL_EST_URB_R_PL_306",
+        "R_M_I_300"
+      ],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "3 credits."
+    },
+    {
+      "id": "bba_signature_two",
+      "name": "Business Signature — Choose Two",
+      "description": "Select two courses from GEN BUS 240, 250, or 308.",
+      "type": "n_courses",
+      "credits_required": null,
+      "courses_required": 2,
+      "courses": [
+        "GEN_BUS_240",
+        "GEN_BUS_250",
+        "GEN_BUS_308"
+      ],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "4 credits total (2 credits each)."
+    },
+    {
+      "id": "calculus",
+      "name": "Calculus",
+      "description": "Complete MATH 213 (Survey of Calculus 2) OR MATH 222 (Calculus 2).",
+      "type": "one_of",
+      "credits_required": null,
+      "courses_required": 1,
+      "courses": [
+        "MATH_213",
+        "MATH_222"
+      ],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "3 credits."
+    },
+    {
+      "id": "finance_required",
+      "name": "Finance Major Required Courses",
+      "description": "All required Finance major courses.",
+      "type": "all_required",
+      "credits_required": null,
+      "courses_required": null,
+      "courses": [
+        "ACCT_I_S_301",
+        "FINANCE_200",
+        "FINANCE_305",
+        "FINANCE_320",
+        "FINANCE_325",
+        "FINANCE_330"
+      ],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "FINANCE/ECON 320 is cross-listed. FINANCE 200 is 1 credit; all others are 3 credits each."
+    },
+    {
+      "id": "finance_upper_electives",
+      "name": "Finance Electives (above 330)",
+      "description": "Complete two 3-credit Finance courses numbered above 330.",
+      "type": "n_credits",
+      "credits_required": 6,
+      "courses_required": null,
+      "courses": [
+        "FINANCE_340",
+        "FINANCE_365",
+        "FINANCE_399",
+        "FINANCE_410",
+        "FINANCE_420",
+        "FINANCE_INTL_BUS_445",
+        "FINANCE_457",
+        "FINANCE_535",
+        "FINANCE_536",
+        "FINANCE_601",
+        "FINANCE_602",
+        "FINANCE_610",
+        "FINANCE_635",
+        "FINANCE_640",
+        "FINANCE_645",
+        "FINANCE_646",
+        "FINANCE_650",
+        "FINANCE_676",
+        "FINANCE_700",
+        "FINANCE_720",
+        "FINANCE_725",
+        "FINANCE_730",
+        "FINANCE_740",
+        "FINANCE_INTL_BUS_745",
+        "FINANCE_757",
+        "FINANCE_760",
+        "FINANCE_765"
+      ],
+      "sub_groups": [],
+      "distinct_from_groups": [],
+      "notes": "Any two 3-credit FINANCE courses numbered above 330. Check current semester offerings."
+    }
+  ]
+}

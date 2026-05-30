@@ -276,6 +276,18 @@
           "sub_groups": [],
           "distinct_from_groups": [],
           "notes": "Wide range of courses satisfy each category. Overlaps significantly with university gen ed breadth requirements."
+        },
+        {
+          "id": "ds_major_declaration",
+          "name": "Data Science Major Declaration",
+          "description": "Complete a formal Data Science major declaration in consultation with your L&S advisor.",
+          "type": "n_courses",
+          "credits_required": null,
+          "courses_required": 1,
+          "courses": [],
+          "sub_groups": [],
+          "distinct_from_groups": [],
+          "notes": "Administrative step — not a course requirement. DARS will show 'NO Major declaration' until you meet with your advisor and submit the declaration form. This cannot be completed through course selection alone."
         }
       ],
       "distinct_from_groups": [],
